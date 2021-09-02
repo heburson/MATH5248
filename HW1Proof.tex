@@ -1,0 +1,37 @@
+   \documentclass[12pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath,amsthm}
+\usepackage{fullpage}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{hyperref}
+\usepackage{xcolor}
+
+\newcommand{\Z}{\mathbb{Z}}
+\newtheorem*{theorem}{Theorem}
+
+\begin{document}
+\begin{center}
+{\Large Homework 1: Proofs}\\
+Due: Friday September 17, 2021\\
+
+
+\end{center}
+{\bf Instructions:} Submit a pdf of your solutions to the HW 1 Proof assignment on Canvas. Remember that your work will be graded based on how well it meets \href{https://docs.google.com/document/d/1emM06_WRh_h941rsjtRE9fRVndJtfRKd9gyS3Fs_rFA/edit?usp=sharing}{the specifications. }
+
+\begin{enumerate}
+
+
+\item (Hoffstein, Pipher, Silverman Ex 1.6, parts b, c) Let $a$, $b$, and $c$ be integers ($a,b,c\in \Z$). Prove the following properties of divisibility.
+\begin{enumerate}
+\item If $a|b$ and $b|a$, then $a=\pm b$.
+\item If $a|b$ and $a|c$, then $a|(b+c)$ and $a|(b-c)$. 
+\end{enumerate} 
+\item Let $m$ be any positive integer. Prove that  if $r$ is the reduction of $N$ modulo $m$ with $r\ne 0$, then $m-r$ is the reduction of $-N$ modulo $m$. (Hint: the reduction modulo $m$ is the same as the unique remainder given by the division algorithm.)
+\item Prove the division algorithm for negative $N$ and positive $m$.  In other words, prove the following theorem. 
+\begin{theorem}
+Given a positive integer $m$ and a negative integer $N$, there are unique integers $q$ and $r$ such that $0\le r<|m|$ and $N=qm+r$. 
+\end{theorem}
+\end{enumerate}
+
+\end{document}
