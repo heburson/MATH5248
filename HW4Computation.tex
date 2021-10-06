@@ -1,0 +1,55 @@
+   \documentclass[10pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{fullpage}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage[colorlinks = true,
+            linkcolor = blue,
+            urlcolor  = blue,
+            citecolor = blue,
+            anchorcolor = blue]{hyperref}
+\usepackage{xcolor}
+
+\newcommand{\Z}{\mathbb{Z}}
+\begin{document}
+\begin{center}
+{\Large Homework 4: Computations}\\
+Due: Friday October 15, 2021 at Noon\\
+
+
+\end{center}
+{\bf Instructions:} Submit a pdf of your solutions to the HW 4 Computational assignment on Canvas. Remember that your work will be graded based on how well it meets \href{https://docs.google.com/document/d/1emM06_WRh_h941rsjtRE9fRVndJtfRKd9gyS3Fs_rFA/edit?usp=sharing}{the specifications. }
+\\[1em]
+
+\noindent {\bf Further instructions:} 
+
+\begin{enumerate}
+
+\item Vigen\`{e}re Cipher Basics
+\begin{enumerate}
+\item Encrypt `meet me in the alley after midnight' with the Vigen\`{e}re cipher with key `pandora'.
+\item If you know that the plaintext ``yum, cookies" has been encrypted to ``zun, cpolifs" using a Vigen\`{e}re cipher, can you determine the key of that Vigen\`{e}re cipher? If so, are you making any assumptions about the key? If not, what can you say about the key? 
+\end{enumerate}
+
+\item Consider an alphabet with four characters: $\spadesuit$, $\heartsuit$, $\diamondsuit$, and $\clubsuit$.  Suppose that you have a text $\underline{s}$ written in this alphabet which consists of $70$ $\spadesuit$s,  $18$ $\heartsuit$s, $10$ $\diamondsuit$s, and $2$ $\clubsuit$s.  What is $\textrm{IndCo}(\underline{s})$?
+
+\item  You are performing a ciphertext-only attack on a ciphertext that you know was encrypted using a Vigenere cipher.  If $y = (y_1, \ldots, y_{N})$ is a string of ciphertext of length $N$, let $$y_{\ell} = (y_1, y_{1+\ell}, y_{1+2\ell}, \ldots, y_{1+\ell\lfloor{\frac{N-1}{\ell}}\rfloor})$$ for each $0 < \ell <N$ ($\lfloor x \rfloor$ is the largest integer $\le x$).  Consider the following table of values of $\ell$ and $\mathrm{IndCo}(y_{\ell})$.
+
+\begin{center}
+    \begin{tabular}{ l | l | l | l }
+    $\ell$ & $\mathrm{IndCo}(y_\ell)$ &  $\ell$ & $\mathrm{IndCo}(y_\ell)$  \\ 
+    \hline
+    3 & 0.035 & 9  & 0.048\\ 
+    4 & 0.039 & 10 & 0.068  \\ 
+    5 & 0.063 & 11 & 0.034  \\
+    6 & 0.041  & 12 & 0.031  \\
+    7 & 0.022  &  13 & 0.050\\
+    8 & 0.033  &  14 & 0.039\\
+    \end{tabular}
+\end{center}
+
+Based on the table above, what do you think the key length is?  Explain your answer. (You may assume that your ciphertext is significantly longer than the key length.)
+
+\end{enumerate}
+\end{document}
