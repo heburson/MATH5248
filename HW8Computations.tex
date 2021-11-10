@@ -1,0 +1,40 @@
+   \documentclass[10pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{fullpage}
+\usepackage{amsfonts}
+\usepackage{amssymb,systeme}
+\usepackage[colorlinks = true,
+            linkcolor = blue,
+            urlcolor  = blue,
+            citecolor = blue,
+            anchorcolor = blue]{hyperref}
+\usepackage{xcolor}
+
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\ds}{\displaystyle}
+\begin{document}
+\begin{center}
+{\Large Homework 8: Computations}\\
+Due: Friday November 19, 2021 at Noon\\
+
+
+\end{center}
+{\bf Instructions:} Submit a pdf of your solutions to the HW 8 Computational assignment on Canvas. Remember that your work will be graded based on how well it meets \href{https://docs.google.com/document/d/1emM06_WRh_h941rsjtRE9fRVndJtfRKd9gyS3Fs_rFA/edit?usp=sharing}{the specifications. }
+
+
+\begin{enumerate}
+ \item For the following values of $y$ and $p$, determine whether or not $y$ is a square modulo $p$.  If it is a square, find the principal square root of $y$ modulo $p$. (Note that, if you determine that $y$ is not a square modulo $p$, you must give a thorough explanation/proof why, even though this is a computational assignment.) \begin{enumerate}
+\item $y=7$, $p=11$
+\item $y=7$, $p=19$
+ \end{enumerate}
+
+
+\item  Bob and Alice would like to use the Diffie-Hellman Key Exchange to agree on a session key $k$. Alice and Bob agree on the prime $6829$ and that the base $6$ modulo $6829$. Alice chooses a secret random number $x$ and tells Bob that $6^x\%6829$ is $5792$. Bob chooses $3$ as his secret exponent. 
+\begin{enumerate}
+\item What is the shared secret key $k$ that Alice and Bob will be using?
+\item You are able to gain access to the network Alice and Bob are using to communicate, so you decide to implement ain interceptor attack with exponent $c=15$. What key does Bob think he and Alice agreed to? What key does Alice think they agreed to?
+\end{enumerate}	
+\item Bruce would like to send Ada a message using her ElGamal cipher.  The public information that Ada has posted is that her prime modulus is $p = 157$, her primitive root modulo $157$ is $g = 5$, and (in the notation from lecture) she has computed $A = 91$.  Bruce's message for Ada is the plaintext $m = 121$, and his secret exponent is $k = 14$.  What information should Bruce send to Ana in order to communicate the message $m = 121$ through her ElGmal cipher?  
+\end{enumerate}
+\end{document}
