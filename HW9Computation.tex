@@ -1,0 +1,48 @@
+   \documentclass[10pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{fullpage}
+\usepackage{amsfonts}
+\usepackage{amssymb,systeme}
+\usepackage[colorlinks = true,
+            linkcolor = blue,
+            urlcolor  = blue,
+            citecolor = blue,
+            anchorcolor = blue]{hyperref}
+\usepackage{xcolor}
+
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\ds}{\displaystyle}
+\begin{document}
+\begin{center}
+{\Large Homework 9: Computations}\\
+Due: Friday December 3, 2021 at Noon\\
+
+
+\end{center}
+{\bf Instructions:} Submit a pdf of your solutions to the HW 9 Computational assignment on Canvas. Remember that your work will be graded based on how well it meets \href{https://docs.google.com/document/d/1emM06_WRh_h941rsjtRE9fRVndJtfRKd9gyS3Fs_rFA/edit?usp=sharing}{the specifications. }
+
+
+\begin{enumerate}
+
+\item Use Euler’s Criterion to determine whether or not $14$ is a square modulo $103$. (You
+may want to use a computer to compute high powers of $14$ modulo $103$ for
+you.) 
+\item You are setting up an RSA cipher with modulus $5021131$.  You may use the fact that $5021131 = 1907(2633)$.  (You may want to use a computer to do most of the computation on this problem.)
+\begin{enumerate}
+\item Is $5$ a valid encryption key?  If so, find the corresponding decryption key.  If not, explain why not.
+
+\item Is $7$ a valid encryption key?  If so, find the corresponding decryption key.  If not, explain why not.
+\item The encryption key $e = 3$ is valid for the modulus $5021131$ and corresponds to the decryption key $d = 3344395$.  If you are setting up a public key with this information, what is all of the information that you would post publicly so that a friend could send you an encrypted message?  What is all of the information relevant to this cipher that you would keep secret?
+\item If your plaintext is represented by $x = 884204$, use the encryption key $e = 3$ to encode $x$.
+\item You have received the ciphertext message $y = 384$.  Use the decryption key $d = 3344395$ to decrypt the message.  
+\end{enumerate}
+\item You know that an enemy has been encrypting messages using RSA and that the recipient's RSA modulus is $n = 39,203$.  (Because the RSA modulus is public information, this setup is plausible except for the very small size of $39,203$ as an RSA modulus.)  You would like to perform an attack on their RSA setup so that you can read their encrypted messages.  Magically, you have access to a square root oracle!  (This part of the setup is not plausible.  If square root oracles existed, RSA would not be secure.)  
+\begin{enumerate}
+\item You compute $1265^2 \equiv 32,105 \pmod{39,203}$ and ask your magical square root oracle for another square root of $32,105$ modulo $39,203$.  Your square root oracle tells you that $37,938^2 \equiv 32,105 \pmod{39,203}$.  Can you use the information given to you by the square root oracle to factor $39,203$?  If so, do it.  If not, explain why not.
+
+\item You compute $1234^2\equiv 33,042 \pmod{39,203}$ and ask your magical square root oracle for another square root of $33,042$ modulo $39,203$. Your square root oracle tells you that $30,089^2\equiv 33,042\pmod{39,203}$.  Can you use the information given to you by the square root oracle to factor $39,203$?  If so, do it.  If not, explain why not.
+\end{enumerate}
+
+\end{enumerate}
+\end{document}
