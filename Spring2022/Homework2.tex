@@ -1,0 +1,48 @@
+   \documentclass[12pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath,amsthm}
+\usepackage{fullpage}
+\usepackage{amsfonts}
+\usepackage{amssymb,multicol}
+\usepackage[colorlinks=true,urlcolor=blue]{hyperref}
+\usepackage{enumitem}
+\usepackage{xcolor}
+
+\newcommand{\Z}{\mathbb{Z}}
+\newtheorem*{theorem}{Theorem}
+
+\newlist{checklist}{itemize}{2}
+\setlist[checklist]{label=$\square$}
+
+\begin{document}
+\begin{center}
+{\Large Homework 2}\\
+Due: Friday,  February 4 at noon\\
+
+
+\end{center}
+{\bf Instructions:} Submit a pdf of your solutions to the HW 2 assignment on Gradescope. 
+
+When working on this assignment, you should focus on the following goals:
+\begin{itemize}
+\item Demonstrate that you understand how to write a complete set of equivalence classes modulo $m$ and when two equivalence classes are equal. 
+\item Demonstrate understanding of the definition of a unit/invertible element modulo $m$.  
+\item Clearly and correctly apply the definition of divisibility in a proof. 
+\item (Problem 4) Use examples to determine if a conjecture is true and then prove or disprove the conjecture. 
+\item Write clear and correct proofs that meet the guidelines \href{https://canvas.umn.edu/courses/292043/pages/writing-guidelines}{linked on the Homework Assignments page in Canvas}.
+\end{itemize}
+
+\begin{enumerate}
+\item[0.] If you would like any of these problems to be graded for proficiency with the core skills, list the skill and the corresponding problem. 
+\item Write out all elements of $\Z_{8}$ using two different collections of representatives for the equivalence classes.  (Note: Your answer will have two different sets; each equivalence class in the first set should be equal to an equivalence class in the second set.)
+\item Make a multiplication table for $\Z_{10}$. Use it to identify the units (invertible elements) of $\Z_{10}$.  What is $\phi(\Z_{10})$?
+\item Find a multiplicative inverse to $n$ modulo $2n-1$. You should justify that your answer is correct, but you do not need to structure your justification as a formal proof. 
+
+\item Prove or disprove: For positive integers $n$ and $N$ and any integer $x$, $$(x\% N)\% n= x\% n.$$
+\item Show that $x^2-y^2=102$ has no solutions in the integers. (Hint: Show that the squares modulo $4$ are all congruent to $0$ or $1$ and use the contrapositive of the reflexivity property of modular congruence.)
+
+\item Suppose that $a=bq+r$, for some integers $a,b, q$ and $r$. Using only the fact that $\gcd(x,y)$ is the largest common divisor of $x$ and $y$, prove that $\gcd(a,b)=\gcd(b,r)$.  (Hint: $x=y$ if and only if $x\le y$ and $x\ge y$.)
+
+\end{enumerate}
+
+\end{document}
