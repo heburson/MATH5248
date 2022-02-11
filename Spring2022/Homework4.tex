@@ -1,0 +1,52 @@
+   \documentclass[12pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath,amsthm}
+\usepackage{fullpage}
+\usepackage{amsfonts}
+\usepackage{amssymb,multicol}
+\usepackage[colorlinks=true,urlcolor=blue]{hyperref}
+\usepackage{enumitem}
+\usepackage{xcolor}
+
+\newcommand{\Z}{\mathbb{Z}}
+\newtheorem*{theorem}{Theorem}
+
+\newlist{checklist}{itemize}{2}
+\setlist[checklist]{label=$\square$}
+
+\begin{document}
+\begin{center}
+{\Large Homework 4}\\
+Due: Friday,  February 18 at noon\\
+
+
+\end{center}
+{\bf Instructions:} Submit a pdf of your solutions to the HW 4 assignment on Gradescope. 
+
+
+\noindent {\bf Note:} Problems 4 and 5 require you to find multiplicative inverses. Since you are showing your skills in doing that by hand in problem 2, you can use whatever technique/computer tool you would like to find the needed inverses for problems 4 and 5.  (In SAGE, the code $inverse\_mod(a,m)$ computes the multiplicative inverse of a modulo m.)
+
+\begin{enumerate}
+\item[0.] If you would like any of these problems to be graded for proficiency with the core skills, list the skill and the corresponding problem. 
+\item Let $p$ be a prime number.  For what integers $x$, is $x^2\equiv 2x\pmod{p}$? Choose two specific values of $p$ and confirm that your answer holds for all $0\le x<p$ for each of your choices. Then, prove your answer.  (Some notes about this problem: (i) you should be able to express your answer as a set of equivalence classes modulo $p$ or a set of statements $x\equiv ?\pmod{p}$; (ii) Your proof should work for an arbitrary value of $p$; (iii)this problem will be worth 6 points--2 points for an answer/conjecture and your work showing that it is supported by your two examples, and $4$ points for the proof.)
+\item Find all solutions to the linear congruence equation $$15x\equiv 6\pmod{9}$$ where $0\le x<9$ by using the following process:
+\begin{enumerate}
+\item Remark how many solutions you expect to find based on the theorem we learned in class.
+\item Find the solutions to the linear congruence equation \begin{equation}\label{lce}
+5x\equiv 2\pmod{3}.
+\end{equation}
+\item Write your solutions as $x=3q+r$ where $q$ is a variable representing an integer and $r$ is a a specific integer determined by your solution to \eqref{lce}.
+\item Which values of $q$ result in an $x$ in the desired range?
+\item State all of the desired solutions.
+\end{enumerate}
+\item Prove that, if $\gcd(a,b)=d$, then $\gcd(\frac{a}{d},\frac{b}{d})=1$.  (Hint: Bezout's identity can help you here.)
+\item (Exercise 1.7.20 in your textbook) Show that a two-round affine cipher (by two-round, we mean encrypting using an affine cipher and then encrypting the result using another affine cipher) can actually have no net effect in some cases. Specifically, show that, for any integer $x$ with $0\le x\le 25$, $E_{25,25}(E_{25,25}(x))=x$. 
+\item Read \href{https://blogs.scientificamerican.com/roots-of-unity/prime-factorization-as-verse/}{this article about poetry based on the Fundamental Theorem of Arithmetic}.  Then, take a stab at writing your own poem using the same FTA structure. For full credit, your poem should satisfy the following specifications/guidelines:
+\begin{itemize}
+\item Follow a similar structure to Glaz's poem shown in the article (i.e.  Write lines for each prime, pick conjunctions to represent exponentiation and multiplication, then put that together in a poem)
+\item Be between 10 and 20 lines (the example poem in the article is 13 lines)
+\end{itemize}
+Be as creative as you want! Any poem that satisfies the guidelines will demonstrate understanding of the fundamental theorem of arithmetic and, thus, earn full credit. 
+\end{enumerate}
+
+\end{document}
