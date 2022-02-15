@@ -28,7 +28,16 @@ Due: Friday,  February 18 at noon\\
 
 \begin{enumerate}
 \item[0.] If you would like any of these problems to be graded for proficiency with the core skills, list the skill and the corresponding problem. 
-\item Let $p$ be a prime number.  For what integers $x$, is $x^2\equiv 2x\pmod{p}$? Choose two specific values of $p$ and confirm that your answer holds for all $0\le x<p$ for each of your choices. Then, prove your answer.  (Some notes about this problem: (i) you should be able to express your answer as a set of equivalence classes modulo $p$ or a set of statements $x\equiv ?\pmod{p}$; (ii) Your proof should work for an arbitrary value of $p$; (iii)this problem will be worth 6 points--2 points for an answer/conjecture and your work showing that it is supported by your two examples, and $4$ points for the proof.)
+\item Let $p$ be a prime number.  For what integers $x$, is $x^2\equiv 2x\pmod{p}$? Prove that the desired congruence holds for those values of $x$.  (Hint: you should be able to express your answer as a set of two equivalence classes modulo $p$ or a set of two statements $x\equiv ?\pmod{p}$.) In solving this problem, complete the following steps:
+\begin{enumerate}
+\item State a conjecture about which values of $x$ give you $x^2\equiv 2x\pmod{p}$.
+\item Choose two specific values of $p$ and confirm that your conjecture holds for these primes.  Specifically, if you conjecture that $x\equiv a\pmod{p}$ or $x\equiv b\pmod{p}$, confirm that $a^2\equiv 2a\pmod{p}$, $b^2\equiv2b\pmod{p}$, and $x^2\not\equiv 2x\pmod{p}$ if $x\not\equiv a,b\pmod{p}$. 
+\item Prove that for any prime $p$, if $x$ is in one of your conjectured equivalence classes modulo $p$, then $x^2\equiv 2x\pmod{p}$. 
+\end{enumerate}
+
+Note 1: To fully prove that you have the right answer, you would also need to show that if $x^2\equiv 2x\pmod{p}$, then $x$ is in one of  solutions your conjectured equivalence classes. However, this statement is harder to prove and less enlightening, so it is not required for this assignment.
+
+Note 2: This problem will be worth 6 points--2 points for parts (a) and (b) and $4$ points for part (c).
 \item Find all solutions to the linear congruence equation $$15x\equiv 6\pmod{9}$$ where $0\le x<9$ by using the following process:
 \begin{enumerate}
 \item Remark how many solutions you expect to find based on the theorem we learned in class.
