@@ -1,0 +1,47 @@
+ \documentclass[12pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath,amsthm}
+\usepackage{fullpage}
+\usepackage{amsfonts}
+\usepackage{amssymb,multicol}
+\usepackage[colorlinks=true,urlcolor=blue]{hyperref}
+\usepackage{enumitem,systeme}
+\usepackage{xcolor}
+
+\newcommand{\Z}{\mathbb{Z}}
+\newtheorem*{theorem}{Theorem}
+\newcommand{\ds}{\displaystyle}
+
+\newlist{checklist}{itemize}{2}
+\setlist[checklist]{label=$\square$}
+
+\begin{document}
+\begin{center}
+{\Large Homework 6}\\
+Due: Friday,  March 25 at noon\\
+
+
+\end{center}
+{\bf Instructions:} Submit a pdf of your solutions to the HW 6 assignment on Gradescope. 
+
+
+
+\begin{enumerate}
+\item[0.] If you would like any of these problems to be graded for proficiency with the core skills, list the skill and the corresponding problem. 
+ \item  A friend sends you the encrypted message $XI$ using a Hill cipher whose key you and your friend agreed at a previous meeting would be $K = \begin{pmatrix}
+1 & 2\\ 
+4 & 17
+\end{pmatrix}$.  What is the plaintext of the message your friend sent you?
+
+\item For each of the following systems of congruences, either find integers $x,y$ satisfying the system or explain why no such integers exist. 
+\begin{enumerate}
+\item  $\ds
+\systeme*{9x+3y \equiv 6 \pmod {13}, x+8y \equiv 2 \pmod {13}}$
+\item $\ds \systeme*{19x+100y \equiv 74 \pmod {323}, 228x+83y \equiv 38 \pmod {323}}$
+\end{enumerate} 
+\item Use the Chinese Remainder Theorem method to find all solutions to $$45x\equiv 15 \pmod{595}.$$ (Note that you likely know how to solve this congruence without using the Chinese Remainder Theorem, but the goal here is to see how you could apply the new concept to old problems, so you will not get credit for solving this problem without referencing the CRT.)
+\item Write down two systems of congruences with the same set of moduli, where one system has one or more solutions and the other system does not.  Find the solutions to the system with solutions and explain why the other system has no solutions. 
+(Note: this problem is worth 8 points.  4 points for providing a system without solutions and explaining why there are no solutions and 4 points for finding and solving a system with solutions.)
+\item Without using brute force, explain why there are $4$ different square roots of $4$ modulo $70$.  
+\end{enumerate}
+\end{document}
