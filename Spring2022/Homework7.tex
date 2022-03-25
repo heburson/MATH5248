@@ -1,0 +1,49 @@
+ \documentclass[12pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath,amsthm}
+\usepackage{fullpage}
+\usepackage{amsfonts}
+\usepackage{amssymb,multicol}
+\usepackage[colorlinks=true,urlcolor=blue]{hyperref}
+\usepackage{enumitem,systeme}
+\usepackage{xcolor}
+
+\newcommand{\Z}{\mathbb{Z}}
+\newtheorem*{theorem}{Theorem}
+\newcommand{\ds}{\displaystyle}
+
+\newlist{checklist}{itemize}{2}
+\setlist[checklist]{label=$\square$}
+
+\begin{document}
+\begin{center}
+{\Large Homework 7}\\
+Due: Friday,  April 1 at noon\\
+
+
+\end{center}
+{\bf Instructions:} Submit a pdf of your solutions to the HW 7 assignment on Gradescope. 
+
+
+
+\begin{enumerate}
+\item[0.] If you would like any of these problems to be graded for proficiency with the core skills, list the skill and the corresponding problem. 
+\item Martha is sending a message talking about how great her sister is.  Martha has encrypted her message using a Hill cipher with a $2\times 2$ key.  You know that she has encrypted the word ``best" to the ciphertext ``JCTF".  What are all possible keys to Martha's Hill cipher? (There may be one or more possible keys.)
+
+\item Find all possible ordered pairs of integers $(x,y)$ with $0\le x,y<15$ satisfying the following system of congruences:
+$$\systeme*{9x+6y\equiv 9\pmod{15}, 7x+12y\equiv 5\pmod{15}}$$ or explain why no such integers exist. 
+
+
+\item In the following problems,  use a recent theorem from class to find the desired $r$ and $s$.  In your solution, indicate clearly which theorem you are using. 
+\begin{enumerate}
+\item Find an integer $0\le r\le 10$ such that $6^{112}\equiv r\pmod{11}$.
+\item Find an integer $0\le s\le 31$ such that $23^{16}\equiv s\pmod{32}$. 
+\end{enumerate}
+(Note: each part of this problem will be worth 3 points. They will be graded using the same rubric as for the 3-point questions on the midterm.)
+
+\item Let $a$ be an integer and $p$ be a prime such that $p\nmid a$.  Prove that, if $\ell$ is an integer such that $a^{\ell}\equiv 1\pmod{p}$ and $k$ is the order of $a$ modulo $p$, then $k|\ell$.  (Hint: it is helpful to apply the division algorithm to write $\ell=qk+r$.)
+
+
+\item Prove that the equation $r^{36}+19t=11$ has no solutions for integers $r$ and $t$. 
+\end{enumerate}
+\end{document}
