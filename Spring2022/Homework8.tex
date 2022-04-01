@@ -1,0 +1,48 @@
+ \documentclass[12pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath,amsthm}
+\usepackage{fullpage}
+\usepackage{amsfonts}
+\usepackage{amssymb,multicol}
+\usepackage[colorlinks=true,urlcolor=blue]{hyperref}
+\usepackage{enumitem,systeme}
+\usepackage{xcolor}
+
+\newcommand{\Z}{\mathbb{Z}}
+\newtheorem*{theorem}{Theorem}
+\newcommand{\ds}{\displaystyle}
+
+\newlist{checklist}{itemize}{2}
+\setlist[checklist]{label=$\square$}
+
+\begin{document}
+\begin{center}
+{\Large Homework 8}\\
+Due: Friday,  April 8 at noon\\
+
+
+\end{center}
+{\bf Instructions:} Submit a pdf of your solutions to the HW 8 assignment on Gradescope. 
+
+
+
+\begin{enumerate}
+\item[0.] If you would like any of these problems to be graded for proficiency with the core skills, list the skill and the corresponding problem. 
+
+\item Determine whether or not $3$ is a primitive root modulo $19$ without computing all of the powers of $3$ modulo $19$. 
+\item Determine whether or not $5$ is a primitive root modulo $20$ without computing \emph{any} of the powers of $5$ modulo $20$. 
+
+\item Prove that, if $a$ is a primitive root modulo $p$, then $a^{-1}$ (the multiplicative inverse of $a$ modulo $p$) is also a primitive root modulo $p$. 
+
+\item Bob and Alice would like to use the Diffie-Hellman Key Exchange to agree on a session key $k$. Alice and Bob agree on the prime $6829$ and that the base $2$ modulo $6829$. Alice chooses a secret random number $x$ and tells Bob that $2^x\%6829$ is $5792$. Bob chooses $3$ as his secret exponent.  Answer the following questions without computing the value of $x$. 
+\begin{enumerate}
+\item What is the shared secret key $k$ that Alice and Bob will be using?
+\item You are able to gain access to the network Alice and Bob are using to communicate, so you decide to implement a interceptor attack with exponent $c=10$. What key does Bob think he and Alice agreed to? What key does Alice think they agreed to?
+\end{enumerate}	
+Note: Each part of this problem will be worth 3 points. They will be graded using the 3-point rubric from the first midterm. 
+
+\item Let $p$ and $q$ be distinct primes.  Show that for all $x \in \mathbb{Z}$, we have the congruence $x^{(p-1)(q-1)+1} \equiv x \pmod{pq}$.  
+
+\end{enumerate}
+
+\end{document}
