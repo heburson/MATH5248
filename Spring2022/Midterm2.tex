@@ -1,0 +1,307 @@
+\documentclass[11pt,addpoints,letterpaper]{exam}
+\usepackage{amsmath,amssymb}
+\usepackage[margin=1in]{geometry}
+\usepackage{enumitem,booktabs}
+\usepackage{amsfonts,amsthm, systeme,calc}
+\usepackage[colorlinks]{hyperref}
+\usepackage{tikz}
+
+\setlength{\parindent}{0pt}
+
+\newtheorem*{axiom}{Axiom}
+
+%%%%%%%%%% Exam formatting %%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newcommand{\answerblank}[2]{
+\begin{tikzpicture}
+\ifprintanswers
+\draw (0,0) -- node[anchor=south, inner sep=1pt] {#2} (#1,0);
+\else
+\draw (0,0) --  (#1,0);
+\fi
+\end{tikzpicture}
+}
+
+\bracketedpoints
+\renewcommand{\questionlabel}{\textbf{\thequestion.}}
+\renewcommand{\partlabel}{\textbf{\thepartno.}}
+\renewcommand{\subpartlabel}{\textbf{\thesubpart.}}
+
+\qformat{Question \thequestion\dotfill \emph{\totalpoints\ points}}
+
+%\newcommand{\quest}[1][0]{\ifnum{#1}>0 \question[#1] \else \noaddpoints \question[\totalpoints] \addpoints \fi}
+
+\vqword{Problem}
+\vtword{Total}
+\cellwidth{1in}
+
+\pagestyle{head}
+
+\firstpageheader{}{}{}
+\runningheader{\scriptsize\textit{Math 5248 --- Midterm Exam 1 (Spring 2022)}}{}{\scriptsize\textit{page \thepage}}
+\runningheadrule
+
+\extrafootheight{-.5in}
+
+%\printanswers
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+\vspace*{-0.5in}
+
+\ifprintanswers
+\begin{center}
+\fbox{\LARGE\textbf{SOLUTIONS}}
+\end{center}
+\fi
+
+{\centering
+
+\LARGE Math 5248 --- Midterm Exam 2
+
+}
+
+\smallskip
+
+{\centering
+
+\large Due by 2:30pm on April 21, 2022
+
+}
+
+\bigskip\bigskip
+
+
+\hrule
+
+\begin{enumerate}[leftmargin=2em,rightmargin=1em]\setlength{\itemsep}{-2pt}
+
+
+\item This exam has a total of 10 problems. 
+
+
+\item Your completed exam must be uploaded to Gradescope by 2:30 pm central standard time on April 21, 2022.  
+
+\item You may use the Garrett textbook, the online textbook \href{http://math.gordon.edu/ntic/ntic/frontmatter-1.html}{Number Theory: In Context and Interactive}, SAGE or another computation tool (such as wolframAlpha), anything linked/posted in the Lecture Schedule page on Canvas, and help from Prof. Burson.
+
+\item You may not use other sources including, but not limited to, forums such as StackExchange and MathOverflow, cites such as Chegg and Course Hero, or other students. 
+
+\item You must clearly explain your answers at a level that another MATH 5248 student could understand.  For examples of sufficient explanation, you may  want to look at the Homework 1-6 solutions posted on Canvas.  
+
+\item You will not get credit for solutions that use major results that we have not covered yet in the course (email Prof. Burson if you are unsure of what counts as a major result). 
+
+\item If you have questions for Prof. Burson, \href{https://calendly.com/hburson/meetings-with-dr-burson}{you may sign up for an appointment here}. 
+
+\item Details about how your work will be assessed can be found on the next page. 
+
+\item If you would like to have some of your problems graded for proficiency please write a list of all problems you would like graded for proficiency credit and which skill(s) you used in each of those problems. \\
+\emph{Proficiency credit information:}
+
+
+
+\end{enumerate}
+
+
+
+\vfill
+
+(If you submit your exam on separate sheets of paper, please copy this statement in full and sign.) 
+\vspace{2em}\\
+\emph{I neither gave nor received aide aside from the resources specifically allowed in item 3 during this exam.}
+
+\vspace{1cm}
+
+\hfill\textbf{Signature:} \answerblank{3in}{}
+
+\vfill
+
+\newpage
+\begin{center}
+\large
+How the exam will be assessed
+\end{center}
+Each part of questions 1-10 will be graded using one of the rubrics below. In the instructions for question 11, there is a summary of how your work will be graded.
+\begin{center}
+\begin{tabular}{|p{3.5cm}|p{2.7cm}|p{2.7cm}|p{2.5cm}|p{2.8cm}|}
+\hline \multicolumn{5}{|c|}{4-point rubric}\\ \hline
+4 & 3 & 2 &1 & 0\\ \hline
+Correct and clearly communicated. Solution/proof demonstrates clear understanding of the concepts. If the problem requires a proof, the proof clearly states all assumptions, defines all variables, and notes where definitions or theorems are used. & Solution/proof demonstrates understanding of the concepts, but might have one minor issue such as a small computational error or a small jump in logic.  & Solution/proof demonstrates partial understanding, but has a large jump in logic or serious writing flaws such as incomplete sentences in a proof.  & Solution/proof shows effort but it has serious flaws in mathematical logic.  &Solution is not submitted, is illegible, or does not demonstrate evidence of understanding. \\ \hline
+\end{tabular}
+\begin{tabular}{|p{3cm}|p{3.9cm}|p{3cm}|p{2.8cm}|}
+\hline \multicolumn{4}{|c|}{3-point rubric}\\ \hline
+ 3 & 2 &1 & 0\\ \hline
+Solution demonstrates clear understanding of the concepts. Work and exposition allow the reader to easily follow the logic. & Solution demonstrates partial, but significant understanding of the concepts. It might have one or two minor issues such as computational errors or a small piece of missing justification. & Solution shows some understanding but it has serious flaws in mathematical logic.  &Solution is not submitted, is illegible, or does not demonstrate evidence of understanding. \\ \hline
+\end{tabular}\\
+\begin{tabular}{|p{3cm}|p{3.6cm}|p{3.4cm}|}
+\hline \multicolumn{3}{|c|}{2-point rubric}\\ \hline
+ 2 &1 & 0\\ \hline
+Solution demonstrates clear understanding of the concepts.  & Solution shows some understanding but it has serious flaws in mathematical logic.  &Solution is not submitted, is illegible, or does not demonstrate evidence of understanding. \\ \hline
+\end{tabular}
+\end{center}
+
+As stated in the syllabus, you will earn a High Pass, a Pass, a No Pass, or an Incomplete on this exam. Here is how to earn each grade:
+\\[1em]
+High pass: You can earn a high pass by earning at least 72 of the 76 points. \\[5pt]
+Pass: You can earn a pass on this exam by earning at least 50 of the 76 points on this exam. \\[5pt]
+No pass: If you obtain between 20 and 49 points, you will earn a No Pass.\\[5pt]
+Incomplete: If you do not meet the criteria for a No Pass, you will earn an incomplete. 
+\\[3em]
+{\bf Revision Policy} Once you get your exam back with my feedback, you will be able to revise your solution for one question. 
+\vspace{\stretch{1}}
+
+\gradetablestretch{1.35}
+
+{\centering
+
+\partialpointtable{1} 
+\\[2em]
+You may find the following useful:
+\begin{align*}
+&A\hspace{.35cm} B\hspace{.35cm}C\hspace{.35cm}D\hspace{.35cm}E\hspace{.35cm}F\hspace{.35cm}G\hspace{.35cm}H\hspace{.35cm}I\hspace{.35cm}J\hspace{.35cm}K\hspace{.35cm}L\hspace{.35cm}M\hspace{.35cm}N\hspace{.35cm}O\hspace{.35cm}P\hspace{.35cm}Q\hspace{.35cm}R\hspace{.35cm}S\hspace{.35cm}T\hspace{.35cm}U\hspace{.35cm}V\hspace{.35cm}W\hspace{.35cm}X\hspace{.35cm}Y\hspace{.35cm}Z\\
+&0\hspace{.46cm} 1\hspace{.46cm} 2\hspace{.46cm} 3\hspace{.46cm} 4\hspace{.46cm} 5\hspace{.46cm} 6\hspace{.46cm} 7\hspace{.46cm} 8\hspace{.46cm} 9\hspace{.35cm} 10\hspace{.285cm} 11\hspace{.285cm} 12\hspace{.285cm} 13\hspace{.285cm} 14\hspace{.285cm} 15\hspace{.285cm}16\hspace{.285cm}17\hspace{.285cm}18\hspace{.285cm}19\hspace{.285cm}20\hspace{.285cm}21\hspace{.285cm}22\hspace{.285cm}23\hspace{.285cm}24\hspace{.285cm}25
+\end{align*}
+}
+
+
+Sage command for computing $a^b\%p$ is \verb|power_mod(a,b,p)|. The Mathematica/WolframAlpha command for the same computation is \verb|PowerMod(a,b,p)|. 
+\vfill
+
+
+
+
+
+\newpage
+
+\begin{questions}
+\begingradingrange{1}
+\question[3] Determine whether or not $15$ is a primitive root of $31$ without computing all of the powers of $15$ modulo $31$.
+\vfill
+
+\question[4]Use the fact that $4^{2305}\equiv274\pmod{4611}$ to prove that $4611$ is not prime. 
+\vfill 
+ \newpage
+ \question For each of the following systems of equations, either find all solutions or explain why no solution exists. 
+\begin{parts}
+\part[3] 
+$$\systeme*{x\equiv 1\pmod{18},
+x\equiv 10\pmod{9},
+x\equiv 2\pmod{5}}$$
+\vfill
+\part[3]
+$$\systeme*{x\equiv 8\pmod{10}, x\equiv 1\pmod{5},x\equiv 2\pmod{7}}$$
+\end{parts}
+ \vfill
+
+\vfill
+    \newpage
+
+
+\question Consider the prime $p=43$. For each of the following integers $y$, determine whether or not $y$ is a square modulo $p$. If it is a square, find the principal square root. If it is not a square, explain why without using brute force. 
+\begin{parts}
+    \part[3] $y=6$
+    \vfill
+   \part[3] $y=2$
+       \vfill
+          \end{parts}
+          
+          \bigskip
+   
+  
+   \newpage
+    \question You have been sending messages with a friend using a Hill cipher with key $K=\begin{pmatrix}
+6 & 3 \\7 &0
+\end{pmatrix}.$ You suspect that someone is trying to intercept your communication and you want to make it (slightly) harder for them to figure out your key.  
+
+  \begin{parts}
+\part[3]  
+Choose a 4-letter plaintext to encrypt and send that meets the following criteria:
+\begin{itemize}
+\item It is a word in English
+\item When an adversary tries to complete a known-plaintext attack with your chosen plaintext and its corresponding ciphertext, they will find more than one possible key, which will slow them down. 
+\end{itemize}
+Write down your chosen plaintext and find the corresponding encrypted ciphertext using a Hill cipher with key K. 
+\vfill
+\part[4] Imagine you are in the place of an adversary/attacker.  Find all possible keys that could have been used to obtain the plaintext-ciphertext pair from part a. (Hint: K should be one of, but not the only, possible keys.)
+
+  
+
+   
+ \end{parts}
+  
+   \vfill
+   \newpage
+\question Adam is creating an ElGamal cipher and chooses prime modulus $2909$, base
+$14$, and random exponent $97$.  
+\begin{parts}
+\part[2] What information does Adam publish for the public to see? (Make sure you include all information the sender needs from Adam to encrypt the message.)
+\vfill
+\part[3]You want to send Adam the message $789$ using his public key.  If you choose the exponent $k=26$ as your ephemeral key, what ciphertext do you send him?
+\vfill
+\part[3] Using Adam's public key, Dr. Burson encrypts a message and sends Adam the ciphertext $(1486, 2515)$. What was the integer value of the original message?
+\vfill
+\end{parts}
+\vfill
+\newpage
+
+\question You want to recieve messages using the RSA algorithm with modulus $54053=283\cdot 191$. 
+\begin{parts}
+\part[3] Give an example of an exponent that would {\bf not} be a valid encryption exponent. Explain why your exponent will not work. 
+\vfill
+\part[4] Give an example of a valid encryption exponent and calculate the matching decryption exponent. 
+\vfill
+\part[2] If you choose the exponent you gave in part b, what information would you publish as your public key so that others can send you messages using RSA?
+\vfill
+\end{parts}
+\newpage
+   
+\question 
+Dr. Burson publishes $(161027, 7)$ as her public key to receive messages using RSA encryption. 
+\begin{parts}
+\part[3] If you want to send Dr. Burson the message $m=987$, what ciphertext would you send?
+\vspace{2in}
+\part[4] You have an oracle that tells you that $432^2\equiv 2413^2 \pmod{161027}$. Can you use this information to factor $161027$? If so, do it. If not, explain why not. 
+
+\end{parts}
+\vfill
+ \question[4] Prove that $x^{28}+58y=3$ has no solutions for integers $x$ and $y$. 
+ \vfill
+\newpage
+\question Suppose that $n$ is an integer possessing a primitive root and that $g$ is a primitive root modulo $n$.  Prove or disprove each of the following statements.
+\begin{parts}
+\part[4]  If $\ell$ and $k$ are integers such that $g^\ell \equiv g^k \pmod n$, then $\ell \equiv k \pmod {\varphi(n)}$.  
+\vfill
+\part[4] If $k\equiv \ell\pmod{n}$, then $g^k\equiv g^\ell\pmod{n}$.
+\vfill
+\part[4] If $k\equiv \ell\pmod{\phi(n)}$, then $g^k\equiv g^\ell \pmod{n}$.
+\end{parts}
+
+ \vfill
+
+\newpage
+
+\question[10] Write 5 true/false questions that illustrate a variety of ideas from this course that you might put on this exam if you were teaching the class. Give a key, explain the answers, then explain why you chose these particular questions and what you hope they will assess. You can earn 2 points per question based on accuracy of your answer key and the clarity of your explainations.\\
+To earn full credit, your questions should satisfy the following criteria:
+\begin{itemize}
+\item At least two statements must be false.
+\item The questions must be different from questions that have appeared on class activities, homework, or exams. (However, it is fine for some of your questions to come from making small changes to statements/questions from class or assignments).
+\item Each question must assess at least one concept that we have learned since the last exam. 
+\item Among your 5 questions, you must assess at least four different concepts. 
+\item For each question, you must include the answer, a thorough explanation of why that is the answer, and an explanation of why you chose that question and what you hope it assesses. 
+\end{itemize}
+
+\vfill
+
+\endgradingrange{1}
+\newpage 
+
+\qformat{Challenge Question {\thequestion}\hfill}
+{Challenge Problems:} To earn a ``High Pass" on this exam, you must correctly complete {\bf one} of the following problems. This problem will be graded Pass/Fail based on mathematical correctness and clear communication. If you submit a solution to more than one problem, the first one will be graded.  If you only care about earning a ``Pass," you may skip this section.
+\begingradingrange{2}
+
+\endgradingrange{2}
+\end{questions}
+
+
+\end{document}
