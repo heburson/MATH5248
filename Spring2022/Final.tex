@@ -1,0 +1,199 @@
+\documentclass[11pt,addpoints,letterpaper]{exam}
+\usepackage{amsmath,amssymb}
+\usepackage[margin=1in]{geometry}
+\usepackage{enumitem,booktabs}
+\usepackage{amsfonts,amsthm, systeme,calc}
+\usepackage[colorlinks]{hyperref}
+\usepackage{tikz}
+
+\setlength{\parindent}{0pt}
+
+\newtheorem*{axiom}{Axiom}
+
+%%%%%%%%%% Exam formatting %%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newcommand{\answerblank}[2]{
+\begin{tikzpicture}
+\ifprintanswers
+\draw (0,0) -- node[anchor=south, inner sep=1pt] {#2} (#1,0);
+\else
+\draw (0,0) --  (#1,0);
+\fi
+\end{tikzpicture}
+}
+
+\bracketedpoints
+\renewcommand{\questionlabel}{\textbf{\thequestion.}}
+\renewcommand{\partlabel}{\textbf{\thepartno.}}
+\renewcommand{\subpartlabel}{\textbf{\thesubpart.}}
+
+\qformat{Question \thequestion \hfill}
+
+%\newcommand{\quest}[1][0]{\ifnum{#1}>0 \question[#1] \else \noaddpoints \question[\totalpoints] \addpoints \fi}
+
+\vqword{Problem}
+\vtword{Total}
+\cellwidth{1in}
+
+\pagestyle{head}
+
+\firstpageheader{}{}{}
+\runningheader{\scriptsize\textit{Math 5248 --- Final Exam (Spring 2022)}}{}{\scriptsize\textit{page \thepage}}
+\runningheadrule
+
+\extrafootheight{-.5in}
+
+%\printanswers
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+\vspace*{-0.5in}
+
+\ifprintanswers
+\begin{center}
+\fbox{\LARGE\textbf{SOLUTIONS}}
+\end{center}
+\fi
+
+{\centering
+
+\LARGE Math 5248 --- Final Exam
+
+}
+
+\smallskip
+
+{\centering
+
+\large Due by 6pm on May 7, 2022
+
+}
+
+\bigskip\bigskip
+
+
+\hrule
+
+\begin{enumerate}[leftmargin=2em,rightmargin=1em]\setlength{\itemsep}{-2pt}
+
+
+\item This exam has a total of 10 problems. 
+
+\item This exam is only for proficiency credit. You may choose any number of questions to submit, and any submission can only improve your final grade. 
+
+\item At the bottom of this page, (or on a separate sheet of paper) specify which mastery items you are seeking credit for and which problems you are using to show mastery of those items. 
+
+\item Problems will only be graded as showing mastery or not showing mastery.  It is possible to use one problem to show more than one skill. 
+
+\item \textbf{You may earn two proficiency credits for skill \#10 (squares) if you use the skill on two different problems.} For all other skills, at most one instance of proficiency shown on this exam will count towards your grade. 
+
+\item Your completed exam must be uploaded to Gradescope by 6 pm central daylight time on May 7, 2022. 
+
+\item Due to grading deadlines, Dr. Burson will not be able to grant any extensions. If you have an emergency that prevents you from completing the exam on time, email Dr. Burson as soon as possible to discuss the option of an incomplete. 
+
+\item You may use the Garrett textbook, the online textbook \href{http://math.gordon.edu/ntic/ntic/frontmatter-1.html}{Number Theory: In Context and Interactive}, SAGE or another computation tool (such as wolframAlpha), anything linked/posted in the Lecture Schedule page on Canvas, and help from Dr. Burson.
+
+\item You may not use other sources including, but not limited to, forums such as StackExchange and MathOverflow, cites such as Chegg and Course Hero, or other students. 
+
+\item You must clearly explain your answers at a level that another MATH 5248 student could understand.  For examples of sufficient explanation, you may  want to look at the Homework solutions posted on Canvas.  
+
+\item You will not get credit for solutions that use major results that we have not covered yet in the course (email Dr. Burson if you are unsure of what counts as a major result). 
+
+\item If you have questions for Dr. Burson, \href{https://calendly.com/hburson/meetings-with-dr-burson}{you may sign up for an appointment here}. 
+
+
+
+\emph{Proficiency credit information:}
+
+
+
+\end{enumerate}
+
+
+
+\vfill
+
+(If you submit your exam on separate sheets of paper, please copy this statement in full and sign.) 
+\vspace{2em}\\
+\emph{I neither gave nor received aide aside from the resources specifically allowed in item 8 during this exam.}
+
+\vspace{1cm}
+
+\hfill\textbf{Signature:} \answerblank{3in}{}
+
+\vfill
+\newpage
+
+You may find the following useful:
+\begin{align*}
+&A\hspace{.35cm} B\hspace{.35cm}C\hspace{.35cm}D\hspace{.35cm}E\hspace{.35cm}F\hspace{.35cm}G\hspace{.35cm}H\hspace{.35cm}I\hspace{.35cm}J\hspace{.35cm}K\hspace{.35cm}L\hspace{.35cm}M\hspace{.35cm}N\hspace{.35cm}O\hspace{.35cm}P\hspace{.35cm}Q\hspace{.35cm}R\hspace{.35cm}S\hspace{.35cm}T\hspace{.35cm}U\hspace{.35cm}V\hspace{.35cm}W\hspace{.35cm}X\hspace{.35cm}Y\hspace{.35cm}Z\\
+&0\hspace{.46cm} 1\hspace{.46cm} 2\hspace{.46cm} 3\hspace{.46cm} 4\hspace{.46cm} 5\hspace{.46cm} 6\hspace{.46cm} 7\hspace{.46cm} 8\hspace{.46cm} 9\hspace{.35cm} 10\hspace{.285cm} 11\hspace{.285cm} 12\hspace{.285cm} 13\hspace{.285cm} 14\hspace{.285cm} 15\hspace{.285cm}16\hspace{.285cm}17\hspace{.285cm}18\hspace{.285cm}19\hspace{.285cm}20\hspace{.285cm}21\hspace{.285cm}22\hspace{.285cm}23\hspace{.285cm}24\hspace{.285cm}25
+\end{align*}
+
+
+
+The Sage command for computing $a^b\%p$ is \verb|power_mod(a,b,p)|. The Mathematica/WolframAlpha command for the same computation is \verb|PowerMod(a,b,p)|. 
+\vfill
+
+
+
+
+
+\newpage
+
+\begin{questions}
+\question Use the Euclidean Algorithm to compute the greatest common divisor of $4320$ and $2256$.
+\vfill
+
+\question Use the Euclidean Algorithm to find the multiplicative inverse of $9$ modulo $77$.
+\vfill 
+ \newpage
+ \question Without explicitly squaring any integers modulo $m$ for any integer $m$, determine if $2$ is a square modulo $35$. 
+
+\vfill
+\question Show that $x^2+15y^3+25z^{11}=8$ has no solutions for integers $x$, $y$, and $z$. 
+\vfill
+    \newpage
+
+
+\question Let $p$ be a prime number such that $p^2|ab$ and $p\nmid b$. Prove that $p^2|a$. 
+          
+          
+          \bigskip
+   
+  
+   \newpage
+    \question  You believe that the plaintext ``Jump" has been encoded by a $2\times 2$ Hill cipher to the ciphertext ``HJML".  What are all possibilities for the key that was used to perform the encryption? If no key is possible, explain why. 
+   
+
+  
+   \vfill
+ 
+   \question Is $11$ a square modulo $191$? Prove your answer without computing $x^2\%191$ for more than one value of $x$.  
+
+\vfill
+\newpage
+\question Prove that the set $\{n,n+4, n+8\}$ contains a multiple of $3$ for any positive integer $n$.  (Hint: apply the division algorithm to $n$.)
+\vfill
+
+
+
+
+\question Find all solutions to the following system of congruences for integers $0\le r,s<21$ or explain why none exist. 
+
+$$\systeme*{5r+2s\equiv 6 \pmod{21}, 4r+7s\equiv 12\pmod{21}}$$
+
+ \vfill
+
+ \newpage
+
+\question Use the fact that $36^{12036}\equiv 20588 \pmod{24073}$ to prove that $24073$ cannot be prime. 
+\vfill
+
+
+\end{questions}
+
+
+\end{document}
