@@ -1,0 +1,49 @@
+   \documentclass[12pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath,amsthm}
+\usepackage{fullpage}
+\usepackage{amsfonts}
+\usepackage{amssymb,multicol}
+\usepackage[colorlinks=true,urlcolor=blue]{hyperref}
+\usepackage{enumitem}
+\usepackage{xcolor}
+
+\newcommand{\Z}{\mathbb{Z}}
+\newtheorem*{theorem}{Theorem}
+
+\newlist{checklist}{itemize}{2}
+\setlist[checklist]{label=$\square$}
+
+\begin{document}
+\begin{center}
+{\Large Homework 2}\\
+Due: Friday,  February 10 at 11:59 ,pm\\
+
+
+\end{center}
+{\bf Instructions:} Submit a pdf of your solutions to the HW 2 assignment on Gradescope. 
+
+When working on this assignment, you should focus on the following goals:
+\begin{itemize}
+\item Demonstrate that you understand how to write a complete set of equivalence classes modulo $m$ and when two equivalence classes are equal. 
+\item Demonstrate understanding of the definition of a unit modulo $m$.  
+\item Use examples to determine if a conjecture is true and then prove or disprove the conjecture. 
+\item Write clear and correct proofs that meet the Writing Guidelines posted on Canvas.
+\end{itemize}
+
+\begin{enumerate}
+\item[0.] If you would like any of these problems to be graded for proficiency with the core skills, list the skill and the corresponding problem. 
+\item Write out all elements of $\Z_{8}$ using two different collections of representatives for the equivalence classes.  (Note: Your answer will have two different sets; each equivalence class in the first set should be equal to an equivalence class in the second set.)
+\item Make a multiplication table for $\Z_{10}$. Use it to identify the units (invertible elements) of $\Z_{10}$.  What is $\phi(10)$?
+\item Let $n$ be a positive integer. Prove that $n$ is a unit modulo $5n-1$. 
+
+\item Prove or disprove each of the following statements.
+\begin{enumerate}
+\item For positive integers $n$ and $N$ and any integer $x$, $$(x\% N)\% n= x\% n.$$
+\item For integers $a$, $b$, $c$, and $m$ with $m,c>0$, if $a\equiv b\pmod{mc}$, then $a\equiv b\pmod{m}$. 
+\end{enumerate} 
+\item Suppose that $a=bq+r$, for some integers $a,b, q$ and $r$. Without using any properties of the $\gcd$ besides the definition as the largest common divisor of $x$ and $y$, prove that $\gcd(a,b)=\gcd(b,r)$.  (Hint: $x=y$ if and only if $x\le y$ and $x\ge y$.)
+
+\end{enumerate}
+
+\end{document}
