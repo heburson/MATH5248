@@ -1,0 +1,45 @@
+   \documentclass[12pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath,amsthm}
+\usepackage{fullpage}
+\usepackage{amsfonts}
+\usepackage{amssymb,multicol}
+\usepackage[colorlinks=true,urlcolor=blue]{hyperref}
+\usepackage{enumitem}
+\usepackage{xcolor}
+
+\newcommand{\Z}{\mathbb{Z}}
+\newtheorem*{theorem}{Theorem}
+
+\newlist{checklist}{itemize}{2}
+\setlist[checklist]{label=$\square$}
+
+\begin{document}
+\begin{center}
+{\Large Homework 3}\\
+Due: Friday,  February 17 at 11:59pm\\
+
+
+\end{center}
+{\bf Instructions:} Submit a pdf of your solutions to the HW 3 assignment on Gradescope. 
+
+
+\noindent {\bf Note:} Problems 4 and 5 require you to find multiplicative inverses. Since you are showing your skills in doing that by hand in problem 2, you can use whatever technique/computer tool you would like to find the needed inverses for problems 4 and 5.  (In SAGE, the code $inverse\_mod(a,m)$ computes the multiplicative inverse of a modulo m.)
+
+\begin{enumerate}
+\item[0.] If you would like any of these problems to be graded for proficiency with the core skills, list the skill and the corresponding problem. 
+\item Use the Euclidean Algorithm to find $\gcd(65330,5420)$.
+\item Use the Euclidean Algorithm to find a multiplicative inverse of $206$ modulo $5427$. 
+\item Prove that, if $a_1$ and $a_2$ are units modulo $m$, then $a_1a_2$ is also a unit modulo $m$. 
+\item Consider an affine cipher with key $(5,4)$. 
+\begin{enumerate}
+\item Encrypt the word ``cryptology" using that cipher. 
+\item You recieve the ciphertext ``DAROVSWR". What is the decrypted plaintext?
+\end{enumerate}
+
+\item Two enemies of yours are passing messages using an affine cipher. You know that they always write formal notes starting with the greating ``Hello" in the plaintext.  You intercept a ciphertext that starts with ``fkhhc." What key did they use?
+
+\item Let $a,b$ and $d$ be integers. Prove that, if $d|a$ and $d|b$, then $d|\gcd(a,b)$. (Hint: Use Bezout's identity.)
+\end{enumerate}
+
+\end{document}
