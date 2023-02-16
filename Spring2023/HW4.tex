@@ -1,0 +1,49 @@
+ \documentclass[12pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath,amsthm}
+\usepackage{fullpage}
+\usepackage{amsfonts}
+\usepackage{amssymb,multicol}
+\usepackage[colorlinks=true,urlcolor=blue]{hyperref}
+\usepackage{enumitem}
+\usepackage{xcolor,systeme}
+
+\newcommand{\Z}{\mathbb{Z}}
+\newtheorem*{theorem}{Theorem}
+
+\newlist{checklist}{itemize}{2}
+\setlist[checklist]{label=$\square$}
+
+\begin{document}
+\begin{center}
+{\Large Homework 4}\\
+Due: Friday,  February 24 at 11:59pm\\
+
+
+\end{center}
+{\bf Instructions:} Submit a pdf of your solutions to the HW 4 assignment on Gradescope. 
+
+
+
+\begin{enumerate}
+\item[0.] If you would like any of these problems to be graded for proficiency with the core skills, list the skill and the corresponding problem. 
+\item Find all solutions to the linear congruence equation $$15x\equiv 6\pmod{9}$$ or explain why no solution exists.
+
+\item Solve each of the following simultaneous systems of congruences or explain
+why no solution exists.
+\begin{enumerate}
+\item $\systeme*{x\equiv 5\pmod{13}, x\equiv 2\pmod{7}\;\;, x\equiv 4 \pmod{11}}$
+\item $\systeme*{x\equiv 3\pmod{9}, x\equiv 2\pmod 6, x\equiv 1\pmod{5}}$
+\end{enumerate}
+
+\item This exercise will help us work towards understanding square roots. 
+\begin{enumerate}
+\item Let $p$ be a prime number and let $b$ be an integer such that $x^2\equiv b\pmod{p}$ has a solution.  Show that,  if $a_1$ and $a_2$ are two such solutions, then $a_1\equiv a_2\pmod{p}$ or $a_1\equiv -a_2\pmod{p}$. 
+\item Provide a counterexample to show that the above statement is not necessarily true if $p$ is not prime. In other words, provide integers $m$, $b$, $a_1$, and $a_2$ such that $a_1^2\equiv b\pmod{m}$, $a_2^2\equiv b\pmod{m}$, but $a_1\not \equiv \pm a_2 \pmod{m}$. Make sure you explain why your counterexample is, in fact, a counterexample. 
+\end{enumerate}
+
+\item Prove that $x^2+y^2=95$ has no integer solutions.
+
+\end{enumerate}
+
+\end{document}
