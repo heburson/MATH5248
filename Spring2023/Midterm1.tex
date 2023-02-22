@@ -1,0 +1,285 @@
+\documentclass[11pt,addpoints,letterpaper]{exam}
+\usepackage{amsmath,amssymb}
+\usepackage[margin=1in]{geometry}
+\usepackage{enumitem,booktabs}
+\usepackage{amsfonts,amsthm, systeme,calc}
+\usepackage[colorlinks]{hyperref}
+\usepackage{tikz}
+
+\setlength{\parindent}{0pt}
+
+\newtheorem*{axiom}{Axiom}
+
+%%%%%%%%%% Exam formatting %%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newcommand{\answerblank}[2]{
+\begin{tikzpicture}
+\ifprintanswers
+\draw (0,0) -- node[anchor=south, inner sep=1pt] {#2} (#1,0);
+\else
+\draw (0,0) --  (#1,0);
+\fi
+\end{tikzpicture}
+}
+
+\bracketedpoints
+\renewcommand{\questionlabel}{\textbf{\thequestion.}}
+\renewcommand{\partlabel}{\textbf{\thepartno.}}
+\renewcommand{\subpartlabel}{\textbf{\thesubpart.}}
+
+\qformat{Question \thequestion\dotfill \emph{\totalpoints\ points}}
+
+%\newcommand{\quest}[1][0]{\ifnum{#1}>0 \question[#1] \else \noaddpoints \question[\totalpoints] \addpoints \fi}
+
+\vqword{Problem}
+\vtword{Total}
+\cellwidth{1in}
+
+\pagestyle{head}
+
+\firstpageheader{}{}{}
+\runningheader{\scriptsize\textit{Math 5248 --- Midterm Exam 1 (Spring 2022)}}{}{\scriptsize\textit{page \thepage}}
+\runningheadrule
+
+\extrafootheight{-.5in}
+
+%\printanswers
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+\vspace*{-0.5in}
+
+\ifprintanswers
+\begin{center}
+\fbox{\LARGE\textbf{SOLUTIONS}}
+\end{center}
+\fi
+
+{\centering
+
+\LARGE Math 5248 --- Midterm Exam 1
+
+}
+
+\smallskip
+
+{\centering
+
+\large Due by 11:59 pm on March 3, 2023
+
+}
+
+\bigskip\bigskip
+
+
+\hrule
+
+\begin{enumerate}[leftmargin=2em,rightmargin=1em]\setlength{\itemsep}{-2pt}
+
+
+\item This exam has a total of 10 problems.  
+
+
+\item Your completed exam must be uploaded to Gradescope by 11:59 pm central standard time on March 3, 2023.  
+
+\item You are allowed to use any non-human resources you can find, but you must cite any sources that you use. Your citation must give enough information for the instructor to find the source you used. 
+
+\item All solutions must be written up using your own words. 
+
+\item You may not use assistance from any humans besides Prof.~Burson. This includes posting the questions on sites such as Chegg or StackExchange.  
+\item You must clearly explain your answers at a level that another MATH 5248 student could understand.  
+
+\item You will not get credit for solutions that use major results that we have not covered yet in the course (email Prof.~Burson if you are unsure of what counts as a major result). 
+
+\item If you have questions for Prof.~Burson, \href{https://calendar.google.com/calendar/selfsched?sstoken=UURMcDY3OWhoVDI3fGRlZmF1bHR8ZGMyODk0OWZhNmE4NzQ0ZmUwYmY0ODk2N2I3NDFiYzk}{you may sign up for an appointment here} or send her an email. 
+
+\item If you would like to have some of your problems graded for proficiency please write a list of all problems you would like graded for proficiency credit and which skill(s) you used in each of those problems. \\
+\emph{Proficiency credit information:}
+
+
+
+\end{enumerate}
+
+
+
+\vfill
+
+(If you submit your exam on separate sheets of paper, please {\bf copy this statement in full} and sign.) 
+\vspace{2em}\\
+\emph{All the work included here represents my individual understanding of the content. I did not give aid to or receive aid from any human sources besides Prof.~Burson.}
+
+\vspace{1cm}
+
+\hfill\textbf{Signature:} \answerblank{3in}{}
+
+\vfill
+
+\newpage
+\begin{center}
+\large
+How the exam will be assessed
+\end{center}
+Each part of questions 1-11 will be graded using one of the rubrics below. In the instructions for question 12, there is a summary of how your work will be graded.
+\begin{center}
+\begin{tabular}{|p{3.5cm}|p{2.7cm}|p{2.7cm}|p{2.5cm}|p{2.8cm}|}
+\hline \multicolumn{5}{|c|}{4-point rubric}\\ \hline
+4 & 3 & 2 &1 & 0\\ \hline
+Correct and clearly communicated. Solution/proof demonstrates clear understanding of the concepts. If the problem requires a proof, the proof clearly states all assumptions, defines all variables, and notes where definitions or theorems are used. & Solution/proof demonstrates understanding of the concepts, but might have one minor issue such as a small computational error or a small jump in logic.  & Solution/proof demonstrates partial understanding, but has a large jump in logic or serious writing flaws such as incomplete sentences in a proof.  & Solution/proof shows effort but it has serious flaws in mathematical logic.  &Solution is not submitted, is illegible, or does not demonstrate evidence of understanding. \\ \hline
+\end{tabular}
+\begin{tabular}{|p{3.5cm}|p{2.7cm}|p{2.8cm}|p{2.5cm}|}
+\hline \multicolumn{4}{|c|}{3-point rubric}\\ \hline
+ 3 & 2 &1 & 0\\ \hline
+Solution demonstrates clear understanding of the concepts. Work and exposition allow the reader to easily follow the logic. & Solution demonstrates partial, but significant understanding of the concepts. It might have one or two minor issues such as computational errors or a small piece of missing justification. & Solution shows some understanding but it has serious flaws in mathematical logic.  &Solution is not submitted, is illegible, or does not demonstrate evidence of understanding. \\ \hline
+\end{tabular}
+\end{center}
+
+
+\vspace{\stretch{1}}
+
+\gradetablestretch{1.35}
+
+{\centering
+
+\partialpointtable{1} 
+\\[2em]
+You may find the following useful:
+\begin{align*}
+&A\hspace{.35cm} B\hspace{.35cm}C\hspace{.35cm}D\hspace{.35cm}E\hspace{.35cm}F\hspace{.35cm}G\hspace{.35cm}H\hspace{.35cm}I\hspace{.35cm}J\hspace{.35cm}K\hspace{.35cm}L\hspace{.35cm}M\hspace{.35cm}N\hspace{.35cm}O\hspace{.35cm}P\hspace{.35cm}Q\hspace{.35cm}R\hspace{.35cm}S\hspace{.35cm}T\hspace{.35cm}U\hspace{.35cm}V\hspace{.35cm}W\hspace{.35cm}X\hspace{.35cm}Y\hspace{.35cm}Z\\
+&0\hspace{.46cm} 1\hspace{.46cm} 2\hspace{.46cm} 3\hspace{.46cm} 4\hspace{.46cm} 5\hspace{.46cm} 6\hspace{.46cm} 7\hspace{.46cm} 8\hspace{.46cm} 9\hspace{.35cm} 10\hspace{.285cm} 11\hspace{.285cm} 12\hspace{.285cm} 13\hspace{.285cm} 14\hspace{.285cm} 15\hspace{.285cm}16\hspace{.285cm}17\hspace{.285cm}18\hspace{.285cm}19\hspace{.285cm}20\hspace{.285cm}21\hspace{.285cm}22\hspace{.285cm}23\hspace{.285cm}24\hspace{.285cm}25
+\end{align*}
+}
+
+\vfill
+
+
+
+
+
+\newpage
+
+\begin{questions}
+\begingradingrange{1}
+\question These questions are computational. You should include enough work and justification to show that you understand the properties of multiplication modulo $m$ and the differences between the notation ``$\%m$" and ``$\!\!\!\mod m$". Note that, it is possible to do this problem without using $\mod m$ notation, but you are allowed to use equivalences modulo $m$  if they help you explain your process. 
+\begin{parts}
+\part[3] Compute  $(63\cdot 934)\%5$ without computing $63\cdot 934$. 
+\vfill
+\part[3] Compute $(23^5)\%25$ without computing $23^5$.
+\vfill
+\end{parts}
+\newpage
+
+   
+    \question
+    \begin{parts} \part[3] Use the Euclidean Algorithm to determine the greatest common divisor of $2023$ and $765$.  
+
+         
+       
+          
+          \vfill
+          
+          \part[3] Are there integers $x$ and $y$ satisfying the equation $15= 2023x+765y$?  If so, find such an $x$ and $y$.  If not, explain how you know that such an $x$ and $y$ cannot exist.  
+    \vfill      
+       
+          \end{parts}
+          
+          \bigskip
+   
+  
+   \newpage
+    \question
+
+  \begin{parts}
+\part[3]  Use the Euclidean Algorithm to find an inverse to $42$ modulo $73$. 
+\vfill
+  
+\part[4]   Let $n$ be a nonzero integer. Prove that $n$ is a unit modulo $2n^2+1$. 
+   
+   \vfill
+   
+ \end{parts}
+  
+   \newpage	
+  \question
+  \begin{parts}
+  \part[4] You believe that the plaintext ``SNOW" has been encrypted using an affine cipher to the ciphertext ``MTCW." What is the key of the cipher?
+ \vfill
+ 
+ \part[3] You believe that the plaintext ``SNOW" has been encrypted to the ciphertext ``MTAW."  Explain why this encryption could not have been the result of applying an affine cipher. 
+ 
+\vfill
+ \part[4] You believe that the plaintext ``UH" has been encrypted using an affine cipher to the ciphertext ``DQ".  What are all the possible keys of that cipher?
+\end{parts}
+\vfill
+
+   \newpage
+\question 
+\begin{parts}
+ \part[4] Prove or disprove the following statement:\\[1em]
+ If $a$ and $b$ are coprime ($\gcd(a,b)=1$) integers and $a|bc$ for some integer $c$, then $a|c$. 
+ \vfill
+ \part[4] Prove or disprove the following statement:\\[1em]
+ If $a$, $b$, and $c$ are integers such that $a \nmid b$ and $a|bc$, then $a|c$. 
+ \vfill
+\end{parts}
+ \newpage
+ \question[4] Prove that $x^2+6y^4+3z^7 = 11$ has no solutions for integers $x,y,z$.  (Hint: A good choice of modulus will allow you to ignore some variables.)
+ \vfill
+
+\question[4] Prove the following statement: \\[1em]
+If $p$ is prime and $x$ is an integer such that $x^2\equiv 2x\pmod{p}$, then $x\equiv 0\pmod{p}$ or $x\equiv 2\pmod{p}$. 
+\vfill
+  
+  \newpage
+
+\question[4]  Find two unique (modulo 715) solutions to the congruence $$x^2\equiv 224\pmod{715},$$ or explain why there are no solutions.
+
+
+
+\newpage
+\question[5]For this problem, choose {\bf one} of the following two options (either a or b, not both). Your work will be graded based on mathematical correctness and how well your explanations satisfy the prompts.
+\begin{parts}
+
+\part Choose a homework problem on which you did not earn full points. Using the feedback provided by the grader, redo your solution. Then, write a paragraph explaining what changes you made and why. Include a summary of what you learned from this process. 
+\vfill
+\newpage	
+\part Prof.~Burson asked ChatGPT to prove or disprove the following statement:
+\begin{quote}
+If $a,b,d, m$ are integers such that $m>0$, $d\not\equiv 0\pmod{m}$, and $da\equiv bd\pmod m$, then $a\equiv b\pmod m$. 
+\end{quote}
+ChatGPT replyed with the following solution (copied verbatim):
+\begin{quote}
+We will prove that the statement is true. Since $d\not\equiv 0\pmod{m}$, there exists an integer $d'$ such that $dd'\equiv 1\pmod{m}$. Multiplying both sides of the congruence $da\equiv bd\pmod{m}$ by $d'$, we obtain:
+$$d'(da)\equiv d'(bd)\pmod{m} \Leftrightarrow (d'd)a\equiv (d'd)b\pmod{m} \Leftrightarrow a\equiv b\pmod{m}$$
+where the last step follows from the fact that $d'd\equiv 1\pmod{m}$.
+
+Therefore, we have shown that if $a,b,d, m$ are integers such that $m>0$, $d\not\equiv 0\pmod{m}$, and $da\equiv bd\pmod m$, then $a\equiv b\pmod m$.
+\end{quote}
+
+For your task, critique this proof.  Your critique should satisfy the following requirements:
+\begin{itemize}
+\item Be written in complete sentences.
+\item Include a sentence giving an overall assessment of the logical/mathematical accuracy of the solution.  Looking back at 4-point rubric on page 2, what grade do you think this solution deserves?
+\item Identify any step that is missing justification. Either fill in the gap by providing that justification (can you cite a theorem? a definition?) or explain why the solution makes a false claim.  
+\end{itemize}
+
+\end{parts}
+\vfill
+\newpage
+\question[10] Write 5 true/false questions that illustrate a variety of ideas from this course that you might put on this exam if you were teaching the class. Give a key, explain the answers, then explain why you chose these particular questions and what you hope they will assess. You can earn 2 points per question based on accuracy of your answer key and the clarity of your explanations.
+To earn full credit, your questions should satisfy the following criteria:
+\begin{itemize}
+\item At least two statements must be false.
+\item The questions must be different from questions that have appeared on class activities, homework, or exams. (However, it is fine for some of your questions to come from making small changes to statements/questions from class or assignments).
+\item Each question must assess at least one concept that we have learned since the last exam. 
+\item Among your 5 questions, you must assess at least four different concepts. 
+\item For each question, you must include the answer, a thorough explanation of why that is the answer, and an explanation of why you chose that question and what you hope it assesses. 
+\end{itemize}
+
+\vfill
+\endgradingrange{1}
+\end{questions}
+
+
+\end{document}
