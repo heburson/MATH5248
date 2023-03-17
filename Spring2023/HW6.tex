@@ -1,0 +1,48 @@
+ \documentclass[12pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath,amsthm}
+\usepackage{fullpage}
+\usepackage{amsfonts}
+\usepackage{amssymb,multicol}
+\usepackage[colorlinks=true,urlcolor=blue]{hyperref}
+\usepackage{enumitem}
+\usepackage{xcolor,systeme}
+
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\ds}{\displaystyle}
+\newtheorem*{theorem}{Theorem}
+
+\newlist{checklist}{itemize}{2}
+\setlist[checklist]{label=$\square$}
+
+\begin{document}
+\begin{center}
+{\Large Homework 6}\\
+Due: Friday,  March 24 at 11:59pm\\
+
+
+\end{center}
+{\bf Instructions:} Submit a pdf of your solutions to the HW 6 assignment on Gradescope.  
+
+
+
+\begin{enumerate}
+\item[0.] If you would like any of these problems to be graded for proficiency with the core skills, list the skill and the corresponding problem. 
+
+\item Martha is sending a message talking about how great her sister is.  Martha has encrypted her message using a Hill cipher with a $2\times 2$ key.  You know that she has encrypted the word ``best" to the ciphertext ``JCTF".  What are all possible keys to Martha's Hill cipher? (There may be one or more possible keys.)
+
+\item Find all possible ordered pairs of integers $(x,y)$ with $0\le x,y<15$ satisfying the following system of congruences:
+$$\systeme*{9x+12y\equiv 3\pmod{21}, 11x+5y\equiv 12\pmod{21}}$$ or explain why no such integers exist. 
+
+\item Vigen\`{e}re Cipher Basics
+\begin{enumerate}
+\item Encrypt `meet me in the alley after midnight' with the Vigen\`{e}re cipher with key `pandora'.
+\item If you know that the plaintext ``yum, cookies" has been encrypted to ``zun, cpolifs" using a Vigen\`{e}re cipher, can you determine the key of that Vigen\`{e}re cipher? If so, state what the key is and list any assumptions you are making about the key. If not, what can you say about the key? 
+\end{enumerate}
+
+\item Consider an alphabet with four characters: $\spadesuit$, $\heartsuit$, $\diamondsuit$, and $\clubsuit$.  Suppose that you have a text $\underline{s}$ written in this alphabet which consists of $70$ $\spadesuit$s,  $18$ $\heartsuit$s, $10$ $\diamondsuit$s, and $2$ $\clubsuit$s.  What is $\textrm{IndCo}(\underline{s})$?
+
+
+\end{enumerate}
+
+\end{document}
