@@ -1,0 +1,90 @@
+ \documentclass[12pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath,amsthm}
+\usepackage{fullpage}
+\usepackage{amsfonts}
+\usepackage{amssymb,multicol}
+\usepackage[colorlinks=true,urlcolor=blue]{hyperref}
+\usepackage{enumitem}
+\usepackage{xcolor,systeme}
+
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\ds}{\displaystyle}
+\newtheorem*{theorem}{Theorem}
+
+\newlist{checklist}{itemize}{2}
+\setlist[checklist]{label=$\square$}
+
+\begin{document}
+\begin{center}
+{\Large Homework 7}\\
+Due: Friday,  March 31 at 11:59pm\\
+
+
+\end{center}
+{\bf Instructions:} Submit a pdf of your solutions to the HW 7 assignment on Gradescope.  
+
+
+
+\begin{enumerate}
+\item[0.] If you would like any of these problems to be graded for proficiency with the core skills, list the skill and the corresponding problem. 
+
+
+\item  You are performing a ciphertext-only attack on a ciphertext that you know was encrypted using a Vigenere cipher.  If $y = (y_1, \ldots, y_{N})$ is a string of ciphertext of length $N$, let $$y_{\ell} = (y_1, y_{1+\ell}, y_{1+2\ell}, \ldots, y_{1+\ell\lfloor{\frac{N-1}{\ell}}\rfloor})$$ for each $0 < \ell <N$ ($\lfloor x \rfloor$ is the largest integer $\le x$).  Consider the following table of values of $\ell$ and $\mathrm{IndCo}(y_{\ell})$.
+
+\begin{center}
+    \begin{tabular}{ l | l | l | l }
+    $\ell$ & $\mathrm{IndCo}(y_\ell)$ &  $\ell$ & $\mathrm{IndCo}(y_\ell)$  \\ 
+    \hline
+    3 & 0.035 & 9  & 0.048\\ 
+    4 & 0.039 & 10 & 0.068  \\ 
+    5 & 0.063 & 11 & 0.034  \\
+    6 & 0.041  & 12 & 0.031  \\
+    7 & 0.022  &  13 & 0.050\\
+    8 & 0.033  &  14 & 0.039\\
+    \end{tabular}
+\end{center}
+
+Based on the table above, what do you think the key length is?  Explain your answer. (You may assume that your ciphertext is significantly longer than the key length.)
+
+\item   You are trying to attack a Vigenere cipher.  You have already determined that this Vigenere cipher has key length $4$.  If $\underline{s} = (s_0, \ldots, s_{N})$ is a string of ciphertext of length $N$ with $N \equiv 0 \pmod4$, let $s^{(j)} = (s_j,s_{4+j},\ldots,s_{N-4+j-1})$ be the substring of $s$ whose typical entry is $s_i$ for some $i \equiv j \pmod 4$.  Let $E_t(s^{(j)})$ be the encryption of the string $s^{(j)}$ by the shift cipher with key $t$ for $0 \leq t \leq 25$ and $0 \leq j \leq 2$ (i.e. the string obtained by taking $y^{(j)}$ and shifting each character forward by $t$ letters).  You compute the following table:
+
+\begin{center}
+    \begin{tabular}{ l | l | l | l }
+    $t$ & $\mathrm{MutIndCo}(s^{(0)},E_t(s^{{(1)}}))$ & $\mathrm{MutIndCo}(s^{(0)},E_t(s^{{(2)}}))$  & $\mathrm{MutIndCo}(s^{(0)},E_t(s^{{(3)}}))$  \\ \hline
+    3 & 0.057 & 0.031 & 0.036 \\     
+    5 & 0.035 & 0.041 & 0.054 \\ 
+    8& 0.052 & 0.072 & 0.042\\ 
+    11 & 0.064 & 0.058 & 0.039\\ 
+    16 & 0.029 & 0.065 & 0.068 \\ 
+    23 & 0.035 & 0.037 & 0.051
+    \end{tabular}
+      \begin{tabular}{ l | l | l}
+    $t$ & $\mathrm{MutIndCo}(s^{(1)},E_t(s^{{(2)}}))$ & $\mathrm{MutIndCo}(s^{(1)},E_t(s^{{(3)}}))$\\ \hline
+    3 & 0.033 & 0.041 \\     
+    5 & 0.039 & 0.069\\ 
+    8 & 0.051 & 0. 038\\ 
+    11 & 0.037 & 0.061\\ 
+    16 & 0.045 & 0.052\\ 
+    23 & 0.061 & 0.035\\
+    \end{tabular}
+    \end{center} 
+    
+For the questions below, assume that,  values of $t$ not appearing in the table above gave rise values of $\mathrm{MutIndCo}(s^{(j)},E_t(s^{(k)}))$ that are unremarkable for all $0 \leq j<k \leq 2$.  
+\begin{enumerate}
+\item Given that the key has the form $k = (k_0, k_1, k_2,k_3)$, based on the data above, what are all likely values of $k_1-k_0$, $k_2-k_0$, and $k_3-k_0$? Explain your answer.
+\item  For what value(s) of $t$, would you expect $\mathrm{MutIndCo}(s^{(2)},E_t(s^{(3)}))$ to be large? Explain your answer.
+\end{enumerate}
+
+\item Prove that the equation $r^{16}+17t=11$ has no solutions for integers $r$ and $t$.  (Hint: Fermat's Little Theorem is useful here.)
+
+\item In this problem you will prove that the two statements of Fermat's Little Theorem are equivalent. See the parts below for precise statements of what you must prove. 
+\begin{enumerate}
+\item Prove that,  if \(p\) is prime and $$a^{p-1}\equiv \begin{cases} 0 \pmod{p} & \text{if } p\mid a \\ 1 \pmod{p} & \text{if } p\nmid a \end{cases},$$ then $$a^p\equiv a\pmod{p}.$$
+\item Prove that, if \(p\) is prime and $$a^p\equiv a\pmod{p},$$ then $$a^{p-1}\equiv \begin{cases} 0 \pmod{p} & \text{if } p\mid a \\ 1 \pmod{p} & \text{if } p\nmid a \end{cases}.$$
+\end{enumerate}
+
+\end{enumerate}
+
+
+\end{document}
