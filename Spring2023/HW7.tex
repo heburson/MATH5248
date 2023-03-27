@@ -47,11 +47,11 @@ Due: Friday,  March 31 at 11:59pm\\
 
 Based on the table above, what do you think the key length is?  Explain your answer. (You may assume that your ciphertext is significantly longer than the key length.)
 
-\item   You are trying to attack a Vigenere cipher.  You have already determined that this Vigenere cipher has key length $4$.  If $\underline{s} = (s_0, \ldots, s_{N})$ is a string of ciphertext of length $N$ with $N \equiv 0 \pmod4$, let $s^{(j)} = (s_j,s_{4+j},\ldots,s_{N-4+j-1})$ be the substring of $s$ whose typical entry is $s_i$ for some $i \equiv j \pmod 4$.  Let $E_t(s^{(j)})$ be the encryption of the string $s^{(j)}$ by the shift cipher with key $t$ for $0 \leq t \leq 25$ and $0 \leq j \leq 2$ (i.e. the string obtained by taking $y^{(j)}$ and shifting each character forward by $t$ letters).  You compute the following table:
+\item   You are trying to attack a Vigenere cipher.  You have already determined that this Vigenere cipher has key length $4$.  If $\underline{s} = (s_1, \ldots, s_{N})$ is a string of ciphertext of length $N$ with $N \equiv 0 \pmod4$, let $s^{(j)} = (s_j,s_{4+j},s_{8+j},\ldots,s_{N-4+j})$ be the substring of $s$ whose typical entry is $s_i$ for some $i \equiv j \pmod 4$.  Let $E_t(s^{(j)})$ be the encryption of the string $s^{(j)}$ by the shift cipher with key $t$ for $0 \leq t \leq 25$ and $1 \leq j \leq 4$ (i.e. the string obtained by taking $s^{(j)}$ and shifting each character forward by $t$ letters).  You compute the following table:
 
 \begin{center}
     \begin{tabular}{ l | l | l | l }
-    $t$ & $\mathrm{MutIndCo}(s^{(0)},E_t(s^{{(1)}}))$ & $\mathrm{MutIndCo}(s^{(0)},E_t(s^{{(2)}}))$  & $\mathrm{MutIndCo}(s^{(0)},E_t(s^{{(3)}}))$  \\ \hline
+    $t$ & $\mathrm{MutIndCo}(s^{(1)},E_t(s^{{(2)}}))$ & $\mathrm{MutIndCo}(s^{(1)},E_t(s^{{(3)}}))$  & $\mathrm{MutIndCo}(s^{(1)},E_t(s^{{(4)}}))$  \\ \hline
     3 & 0.057 & 0.031 & 0.036 \\     
     5 & 0.035 & 0.041 & 0.054 \\ 
     8& 0.052 & 0.072 & 0.042\\ 
@@ -60,7 +60,7 @@ Based on the table above, what do you think the key length is?  Explain your ans
     23 & 0.035 & 0.037 & 0.051
     \end{tabular}
       \begin{tabular}{ l | l | l}
-    $t$ & $\mathrm{MutIndCo}(s^{(1)},E_t(s^{{(2)}}))$ & $\mathrm{MutIndCo}(s^{(1)},E_t(s^{{(3)}}))$\\ \hline
+    $t$ & $\mathrm{MutIndCo}(s^{(2)},E_t(s^{{(3)}}))$ & $\mathrm{MutIndCo}(s^{(2)},E_t(s^{{(4)}}))$\\ \hline
     3 & 0.033 & 0.041 \\     
     5 & 0.039 & 0.069\\ 
     8 & 0.051 & 0. 038\\ 
@@ -70,7 +70,7 @@ Based on the table above, what do you think the key length is?  Explain your ans
     \end{tabular}
     \end{center} 
     
-For the questions below, assume that,  values of $t$ not appearing in the table above gave rise values of $\mathrm{MutIndCo}(s^{(j)},E_t(s^{(k)}))$ that are unremarkable for all $0 \leq j<k \leq 2$.  
+For the questions below, assume that,  values of $t$ not appearing in the table above gave rise values of $\mathrm{MutIndCo}(s^{(j)},E_t(s^{(k)}))$ that are unremarkable for all $1 \leq j<k \leq 4$.  
 \begin{enumerate}
 \item Given that the key has the form $k = (k_0, k_1, k_2,k_3)$, based on the data above, what are all likely values of $k_1-k_0$, $k_2-k_0$, and $k_3-k_0$? Explain your answer.
 \item  For what value(s) of $t$, would you expect $\mathrm{MutIndCo}(s^{(2)},E_t(s^{(3)}))$ to be large? Explain your answer.
