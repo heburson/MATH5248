@@ -1,0 +1,49 @@
+ \documentclass[12pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath,amsthm}
+\usepackage{fullpage}
+\usepackage{amsfonts}
+\usepackage{amssymb,multicol}
+\usepackage[colorlinks=true,urlcolor=blue]{hyperref}
+\usepackage{enumitem}
+\usepackage{xcolor,systeme}
+
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\ds}{\displaystyle}
+\newtheorem*{theorem}{Theorem}
+
+\newlist{checklist}{itemize}{2}
+\setlist[checklist]{label=$\square$}
+
+\begin{document}
+\begin{center}
+{\Large Homework 8}\\
+Due: Friday,  April 7 at 11:59pm\\
+
+
+\end{center}
+{\bf Instructions:} Submit a pdf of your solutions to the HW 8 assignment on Gradescope.  
+
+
+
+\begin{enumerate}
+\item[0.] If you would like any of these problems to be graded for proficiency with the core skills, list the skill and the corresponding problem. 
+
+\item Let $p$ and $q$ be distinct primes.  Show that for all $x \in \mathbb{Z}$, we have the congruence $x^{(p-1)(q-1)+1} \equiv x \pmod{pq}$.  (Hint: Use the Chinese Remainder Theorem to reframe the desired congruence as a system of two congruences--one modulo $p$ and one modulo $q$.)
+
+\item Determine the order of $12$ modulo $35$ without computing $12^a\%35$ for more than $7$ values of $a$
+
+\item Prove that, if $a$ is a primitive root modulo $p$, then $a^{-1}$ (the multiplicative inverse of $a$ modulo $p$) is also a primitive root modulo $p$. 
+
+\item Explain why $5$ is not a primitive root modulo $20$ without computing \emph{any} of the powers of $5$ modulo $20$. 
+
+\item Determine whether or not $3$ is a primitive root modulo $19$ without computing all of the powers of $3$ modulo $19$. 
+
+
+
+
+
+\end{enumerate}
+
+
+\end{document}
