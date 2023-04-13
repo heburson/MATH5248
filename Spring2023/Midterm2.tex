@@ -1,0 +1,276 @@
+\documentclass[11pt,addpoints,letterpaper]{exam}
+\usepackage{amsmath,amssymb}
+\usepackage[margin=1in]{geometry}
+\usepackage{enumitem,booktabs}
+\usepackage{amsfonts,amsthm, systeme,calc}
+\usepackage[colorlinks]{hyperref}
+\usepackage{tikz}
+
+\setlength{\parindent}{0pt}
+
+\newtheorem*{axiom}{Axiom}
+
+%%%%%%%%%% Exam formatting %%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newcommand{\answerblank}[2]{
+\begin{tikzpicture}
+\ifprintanswers
+\draw (0,0) -- node[anchor=south, inner sep=1pt] {#2} (#1,0);
+\else
+\draw (0,0) --  (#1,0);
+\fi
+\end{tikzpicture}
+}
+
+\bracketedpoints
+\renewcommand{\questionlabel}{\textbf{\thequestion.}}
+\renewcommand{\partlabel}{\textbf{\thepartno.}}
+\renewcommand{\subpartlabel}{\textbf{\thesubpart.}}
+
+\qformat{Question \thequestion\dotfill \emph{\totalpoints\ points}}
+
+%\newcommand{\quest}[1][0]{\ifnum{#1}>0 \question[#1] \else \noaddpoints \question[\totalpoints] \addpoints \fi}
+
+\vqword{Problem}
+\vtword{Total}
+\cellwidth{1in}
+
+\pagestyle{head}
+
+\firstpageheader{}{}{}
+\runningheader{\scriptsize\textit{Math 5248 --- Midterm Exam 2 (Spring 2023)}}{}{\scriptsize\textit{page \thepage}}
+\runningheadrule
+
+\extrafootheight{-.5in}
+
+%\printanswers
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+\vspace*{-0.5in}
+
+\ifprintanswers
+\begin{center}
+\fbox{\LARGE\textbf{SOLUTIONS}}
+\end{center}
+\fi
+
+{\centering
+
+\LARGE Math 5248 --- Midterm Exam 2
+
+}
+
+\smallskip
+
+{\centering
+
+\large Due by 11:59pm on April 21, 2022
+
+}
+
+\bigskip\bigskip
+
+
+\hrule
+
+\begin{enumerate}[leftmargin=2em,rightmargin=1em]\setlength{\itemsep}{-2pt}
+
+
+\item This exam has a total of 11 required problems.  Additionally, there are 3 optional problems that will be graded for proficiency only. 
+
+
+\item Your completed exam must be uploaded to Gradescope by 11:59 pm central standard time on April 21, 2023.  
+
+\item You are allowed to use any non-human resources you can find, but you must cite any sources that you use. Your citation must give enough information for the instructor to find the source you used. 
+
+\item All solutions must be written up using your own words. 
+
+\item You may not use assistance from any humans besides Prof.~Burson. This includes posting the questions on sites such as Chegg or StackExchange.  
+\item You must clearly explain your answers at a level that another MATH 5248 student could understand.  
+
+\item You will not get credit for solutions that use major results that we have not covered yet in the course (email Prof.~Burson if you are unsure of what counts as a major result). 
+
+\item If you have questions for Prof.~Burson, \href{https://calendar.google.com/calendar/selfsched?sstoken=UURMcDY3OWhoVDI3fGRlZmF1bHR8ZGMyODk0OWZhNmE4NzQ0ZmUwYmY0ODk2N2I3NDFiYzk}{you may sign up for an appointment here} or send her an email. 
+
+\item If you would like to have some of your problems graded for proficiency please write a list of all problems you would like graded for proficiency credit and which skill(s) you used in each of those problems. \\
+\emph{Proficiency credit information:}
+
+
+
+
+\end{enumerate}
+
+
+
+\vfill
+
+(If you submit your exam on separate sheets of paper, please {\bf copy this statement in full} and sign. You only need to copy the statement once. ) 
+\vspace{2em}\\
+\emph{I neither gave nor received aide aside from the resources specifically allowed in item 3 during this exam.}
+
+\vspace{1cm}
+
+\hfill\textbf{Signature:} \answerblank{3in}{}
+
+\vfill
+
+\newpage
+\begin{center}
+\large
+How the exam will be assessed
+\end{center}
+Each part of questions X-Y will be graded using one of the rubrics below. In the instructions for question Z, there is a summary of how your work will be graded.
+\begin{center}
+\begin{tabular}{|p{3.5cm}|p{2.7cm}|p{2.7cm}|p{2.5cm}|p{2.8cm}|}
+\hline \multicolumn{5}{|c|}{4-point rubric}\\ \hline
+4 & 3 & 2 &1 & 0\\ \hline
+Correct and clearly communicated. Solution/proof demonstrates clear understanding of the concepts. If the problem requires a proof, the proof clearly states all assumptions, defines all variables, and notes where definitions or theorems are used. & Solution/proof demonstrates understanding of the concepts, but might have one minor issue such as a small computational error or a small jump in logic.  & Solution/proof demonstrates partial understanding, but has a large jump in logic or serious writing flaws such as incomplete sentences in a proof.  & Solution/proof shows effort but it has serious flaws in mathematical logic.  &Solution is not submitted, is illegible, or does not demonstrate evidence of understanding. \\ \hline
+\end{tabular}
+\begin{tabular}{|p{3cm}|p{3.9cm}|p{3cm}|p{2.8cm}|}
+\hline \multicolumn{4}{|c|}{3-point rubric}\\ \hline
+ 3 & 2 &1 & 0\\ \hline
+Solution demonstrates clear understanding of the concepts. Work and exposition allow the reader to easily follow the logic. & Solution demonstrates partial, but significant understanding of the concepts. It might have one or two minor issues such as computational errors or a small piece of missing justification. & Solution shows some understanding but it has serious flaws in mathematical logic.  &Solution is not submitted, is illegible, or does not demonstrate evidence of understanding. \\ \hline
+\end{tabular}\\
+\begin{tabular}{|p{3cm}|p{3.6cm}|p{3.4cm}|}
+\hline \multicolumn{3}{|c|}{2-point rubric}\\ \hline
+ 2 &1 & 0\\ \hline
+Solution demonstrates clear understanding of the concepts.  & Solution shows some understanding but it has serious flaws in mathematical logic.  &Solution is not submitted, is illegible, or does not demonstrate evidence of understanding. \\ \hline
+\end{tabular}
+\end{center}
+
+
+\vspace{\stretch{1}}
+
+\gradetablestretch{1.35}
+
+{\centering
+
+\partialpointtable{1} 
+\\[2em]
+You may find the following useful:
+\begin{align*}
+&A\hspace{.35cm} B\hspace{.35cm}C\hspace{.35cm}D\hspace{.35cm}E\hspace{.35cm}F\hspace{.35cm}G\hspace{.35cm}H\hspace{.35cm}I\hspace{.35cm}J\hspace{.35cm}K\hspace{.35cm}L\hspace{.35cm}M\hspace{.35cm}N\hspace{.35cm}O\hspace{.35cm}P\hspace{.35cm}Q\hspace{.35cm}R\hspace{.35cm}S\hspace{.35cm}T\hspace{.35cm}U\hspace{.35cm}V\hspace{.35cm}W\hspace{.35cm}X\hspace{.35cm}Y\hspace{.35cm}Z\\
+&0\hspace{.46cm} 1\hspace{.46cm} 2\hspace{.46cm} 3\hspace{.46cm} 4\hspace{.46cm} 5\hspace{.46cm} 6\hspace{.46cm} 7\hspace{.46cm} 8\hspace{.46cm} 9\hspace{.35cm} 10\hspace{.285cm} 11\hspace{.285cm} 12\hspace{.285cm} 13\hspace{.285cm} 14\hspace{.285cm} 15\hspace{.285cm}16\hspace{.285cm}17\hspace{.285cm}18\hspace{.285cm}19\hspace{.285cm}20\hspace{.285cm}21\hspace{.285cm}22\hspace{.285cm}23\hspace{.285cm}24\hspace{.285cm}25
+\end{align*}
+}
+
+
+The sage command for computing $a^b\%p$ is \verb|power_mod(a,b,p)|. The Mathematica/WolframAlpha command for the same computation is \verb|PowerMod(a,b,p)|. 
+\vfill
+
+
+
+
+
+\newpage
+
+\begin{questions}
+\begingradingrange{1}
+\question[3] Determine whether or not $7$ is a primitive root of $31$ without computing all of the powers of $7$ modulo $31$.
+\vfill
+
+\question[3]Use the fact that $8^{4645}\equiv8\pmod{9291}$ to prove that $9291$ is not prime. 
+\vfill 
+\question[3]  Find the principal square root of $6$ modulo $11$, or explain why one does not exist. 
+   
+  \vfill
+   \newpage
+ \question Consider the following system of equations:
+ $$\systeme*{8x+5y\equiv a \pmod{14}, bx+y\equiv 3 \pmod{14}},$$
+where you will choose values for the constants $a$ and $b$ in each part of this problem. Make sure to clearly state your choice for $a$ and $b$ in each part.
+\begin{parts}
+\part[3] Choose integer values for $a$ and $b$ such that the system has one solution modulo $14$.  Then, find that solution to your system, making sure to clearly explain your steps. 
+\vfill
+\part[4] Choose integer values for $a$ and $b$ such that the system has multiple solutions modulo $14$.  Then, find the solutions to your system, making sure to clearly explain your steps.
+\vfill 
+\part[3] Choose integer values for $a$ and $b$ such that the system has no solutions. Explain why your system has no solutions. 
+\end{parts}
+\vfill
+    \newpage
+
+
+
+    \question You want to send messages using a Hill cipher with key $K=\begin{pmatrix}
+6 & 3 \\7 &0
+\end{pmatrix}.$ 
+
+  \begin{parts}
+\part[3]  
+Encrypt the message ``hello all". 
+\vfill
+\part[4] Decrypt the ciphertext ``INXGXC."
+\vfill
+\part[4] An adversary intercepts your communication. However, you are lucky that the adversary was only able to figure out that the plaintext ``stop" corresponds to the ciphertext ``JWZU." They will find that there are two possible keys that could have been used.  What are those two keys?
+
+  
+
+   
+ \end{parts}
+  
+   \vfill
+   \newpage
+\question Kate is creating an ElGamal cipher and chooses prime modulus $3917$, base $21$, and random exponent $68$.  
+\begin{parts}
+\part[2] What information does Kate publish for the public to see? (Make sure you include all information the sender needs from Kate to encrypt the message.)
+\vfill
+\part[3]You want to send Kate the message $789$ using her public key.  If you choose the exponent $k=26$ as your ephemeral key, what ciphertext do you send her?
+\vfill
+\part[3] Using Kate's public key, Dr. Burson encrypts a message and sends Kate the ciphertext $(306, 896)$. What was the integer value of the original message?
+\vfill
+\end{parts}
+\vfill
+\newpage
+
+\question You want to recieve messages using the RSA algorithm with modulus $736313=991\cdot 743$. 
+\begin{parts}
+\part[2] Give an example of an exponent that would {\bf not} be a valid encryption exponent. Explain why your exponent will not work. 
+\vfill
+\part[3] Give an example of a valid encryption exponent and calculate the matching decryption exponent. 
+\vfill
+\end{parts}
+\newpage
+   
+\question 
+Dr. Burson publishes $(201967, 7)$ as her public key to receive messages using RSA encryption. 
+\begin{parts}
+\part[3] If you want to send Dr. Burson the message $m=842$, what ciphertext would you send?
+\vspace{2in}
+\part[4] You have an oracle that tells you that $432^2\equiv 201535^2 \pmod{201967}$. Can you use this information to factor $201967$? If so, do it. If not, explain why not. 
+
+\end{parts}
+\vfill
+ \question[4] Prove that $x^{32}+51y=5$ has no integer solutions.
+ \vfill
+\newpage
+ \question Let $p\ge 5$ be a prime. We say that $a$ is a \emph{cube modulo} $p$ if there is an integer $c$ satisfying $a\equiv c^3\pmod{p}$. 
+ \begin{parts}
+ \part[3] Let $a$ and $b$ be cubes modulo $p$. Prove that $ab$ is a cube modulo $p$. 
+ \vfill
+ \part[3] Give an example to show that (unlike the case with squares), it is possible for none of $a$, $b$, and $ab$ to be a cube modulo $p$. 
+ \vfill
+ \end{parts}
+ \vfill
+ \newpage
+\question Suppose that $n$ is an integer possessing a primitive root and that $g$ is a primitive root modulo $n$.  Prove or disprove each of the following statements.
+\begin{parts}
+\part[4] If $k\equiv \ell\pmod{n}$, then $g^k\equiv g^\ell\pmod{n}$.
+\vfill
+\part[4] If $k\equiv \ell\pmod{\phi(n)}$, then $g^k\equiv g^\ell \pmod{n}$.
+\vfill
+\end{parts}
+\newpage
+The following questions are optional and will be graded for proficiency only. 
+\question Prove that, if $g$ is a primitive root modulo $n$, then $g$ is a unit modulo $n$.
+ \vfill
+ \question Let $a$ and $b$ be positive integers. Prove that,  if $\gcd(a,b)=1$, then $\gcd(a^2,b)=1$. 
+ \vfill
+\question Fix a prime number $p$ and an integer $n\not\equiv 0,1\pmod{p}$. Set $x=n^{p-2}+n^{p-3}+\cdots+n+1$. Show that $p|x$. (Hint: consider expanding $(n-1)x$.)
+\vfill
+\endgradingrange{1}
+\end{questions}
+
+
+\end{document}
