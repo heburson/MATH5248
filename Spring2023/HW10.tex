@@ -1,0 +1,45 @@
+ \documentclass[12pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath,amsthm}
+\usepackage{fullpage}
+\usepackage{amsfonts}
+\usepackage{amssymb,multicol}
+\usepackage[colorlinks=true,urlcolor=blue]{hyperref}
+\usepackage{enumitem}
+\usepackage{xcolor,systeme}
+
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\ds}{\displaystyle}
+\newtheorem*{theorem}{Theorem}
+
+\newlist{checklist}{itemize}{2}
+\setlist[checklist]{label=$\square$}
+
+\begin{document}
+\begin{center}
+{\Large Homework 10}\\
+Due: Friday,  April 28 at 11:59pm\\
+
+
+\end{center}
+{\bf Instructions:} Submit a pdf of your solutions to the HW 10 assignment on Gradescope.  
+
+{ These problems will be graded for proficiency credit only.  You may do as many or as few of them as you would like.}
+
+
+
+\begin{enumerate}
+\item[0.] List the skill and the corresponding problem for each skill you would like to earn proficiency with. 
+
+\item In this problem, you will explain why the square root attack on RSA works. Let $N=pq$, where $p$ and $q$ are prime numbers.  Let $a$ and $b$ be two integers such that $a\not\equiv \pm b\pmod{N}$.  Prove that, if $x>1$ is an integer such that $x|N$ and $x|a+b$, then $x=p$ or $x=q$. 
+
+\item Without explicitly squaring any integers modulo $m$ for any integer $m$, determine if $2$ is a square modulo $35$. 
+
+\item Let $p$ be an odd prime. How many integers $0\le x \le p-1$ satisfy the congruence $(x^p)^p-(x^{p-1})^p+x^{p-1}-x\equiv 0\pmod{p}?$ Explain your answer with a proof. 
+
+\item Define $\gcd(a,b,c)$ to be the largest integer $d$ such that $d|a$, $d|b$, and $d|c$.  Let $a$, $b$, and $c$ be integers such that $\gcd(a,b,c)=1$. Prove that there are integers $w$, $x$, and $y$ such that $aw+bx+cy=1$.  (Note that it is possible in this problem to have $\gcd(a,b)>1$, $\gcd(b,c)>1$, and $\gcd(a,c)>1$.)
+
+\end{enumerate}
+
+
+\end{document}
