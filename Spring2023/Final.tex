@@ -1,0 +1,196 @@
+\documentclass[11pt,addpoints,letterpaper]{exam}
+\usepackage{amsmath,amssymb}
+\usepackage[margin=1in]{geometry}
+\usepackage{enumitem,booktabs}
+\usepackage{amsfonts,amsthm, systeme,calc}
+\usepackage[colorlinks]{hyperref}
+\usepackage{tikz}
+
+\setlength{\parindent}{0pt}
+
+\newtheorem*{axiom}{Axiom}
+
+%%%%%%%%%% Exam formatting %%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newcommand{\answerblank}[2]{
+\begin{tikzpicture}
+\ifprintanswers
+\draw (0,0) -- node[anchor=south, inner sep=1pt] {#2} (#1,0);
+\else
+\draw (0,0) --  (#1,0);
+\fi
+\end{tikzpicture}
+}
+
+\bracketedpoints
+\renewcommand{\questionlabel}{\textbf{\thequestion.}}
+\renewcommand{\partlabel}{\textbf{\thepartno.}}
+\renewcommand{\subpartlabel}{\textbf{\thesubpart.}}
+
+\qformat{Question \thequestion \hfill}
+
+%\newcommand{\quest}[1][0]{\ifnum{#1}>0 \question[#1] \else \noaddpoints \question[\totalpoints] \addpoints \fi}
+
+\vqword{Problem}
+\vtword{Total}
+\cellwidth{1in}
+
+\pagestyle{head}
+
+\firstpageheader{}{}{}
+\runningheader{\scriptsize\textit{Math 5248 --- Final Exam (Spring 2023)}}{}{\scriptsize\textit{page \thepage}}
+\runningheadrule
+
+\extrafootheight{-.5in}
+
+%\printanswers
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+\vspace*{-0.5in}
+
+\ifprintanswers
+\begin{center}
+\fbox{\LARGE\textbf{SOLUTIONS}}
+\end{center}
+\fi
+
+{\centering
+
+\LARGE Math 5248 --- Final Exam
+
+}
+
+\smallskip
+
+{\centering
+
+\large Due by 11:59 pm on May 6, 2023
+
+}
+
+\bigskip\bigskip
+
+
+\hrule
+
+\begin{enumerate}[leftmargin=2em,rightmargin=1em]\setlength{\itemsep}{-2pt}
+
+
+\item This exam has a total of 10 problems. 
+
+\item This exam is only for proficiency credit. You may choose any number of questions to submit, and any submission can only improve your final grade. 
+
+\item At the bottom of this page, (or on a separate sheet of paper) specify which mastery items you are seeking credit for and which problems you are using to show mastery of those items. 
+
+\item Problems will only be graded as showing proficiency or not showing proficiency.  It is possible to use one problem to show more than one skill. 
+
+\item \textbf{You may earn two proficiency credits for skill \#10 (squares) if you use the skill on two different problems.} For all other skills, at most one instance of proficiency shown on this exam will count towards your grade. 
+
+\item Your completed exam must be uploaded to Gradescope by 11:59 pm central daylight time on May 6, 2023. 
+
+\item Due to grading deadlines, Dr. Burson will not be able to grant any extensions. If you have an emergency that prevents you from completing the exam on time, email Dr. Burson as soon as possible to discuss the option of an incomplete. 
+
+
+\item You are allowed to use any non-human resources you can find, but you must cite any sources that you use. Your citation must give enough information for the instructor to find the source you used. 
+
+\item You may not use assistance from any humans besides Prof.~Burson. This includes posting the questions on sites such as Chegg or StackExchange.  
+
+\item You must clearly explain your answers at a level that another MATH 5248 student could understand.  For examples of sufficient explanation, you may want to look at the example Homework solutions linked on Canvas.  
+
+\item You will not get credit for solutions that use major results that we have not covered yet in the course (email Dr. Burson if you are unsure of what counts as a major result). 
+
+\item {\bf To earn credit for completing a problem, you must associate the pages  containing your solution with the appropriate problem during the submission process.}
+
+\item If you have questions for Prof.~Burson, \href{https://calendar.google.com/calendar/selfsched?sstoken=UURMcDY3OWhoVDI3fGRlZmF1bHR8ZGMyODk0OWZhNmE4NzQ0ZmUwYmY0ODk2N2I3NDFiYzk}{you may sign up for an appointment here} or send her an email. 
+
+
+
+\emph{Proficiency credit information:}
+
+
+
+\end{enumerate}
+
+
+
+\vfill
+
+(If you submit your exam on separate sheets of paper, please copy this statement in full and sign. You only need to copy/sign the statement once.) 
+\vspace{2em}\\
+\emph{I neither gave nor received aide aside from the resources specifically allowed in item 8 during this exam.}
+
+\vspace{1cm}
+
+\hfill\textbf{Signature:} \answerblank{3in}{}
+
+\vfill
+\newpage
+
+You may find the following useful:
+\begin{align*}
+&A\hspace{.35cm} B\hspace{.35cm}C\hspace{.35cm}D\hspace{.35cm}E\hspace{.35cm}F\hspace{.35cm}G\hspace{.35cm}H\hspace{.35cm}I\hspace{.35cm}J\hspace{.35cm}K\hspace{.35cm}L\hspace{.35cm}M\hspace{.35cm}N\hspace{.35cm}O\hspace{.35cm}P\hspace{.35cm}Q\hspace{.35cm}R\hspace{.35cm}S\hspace{.35cm}T\hspace{.35cm}U\hspace{.35cm}V\hspace{.35cm}W\hspace{.35cm}X\hspace{.35cm}Y\hspace{.35cm}Z\\
+&0\hspace{.46cm} 1\hspace{.46cm} 2\hspace{.46cm} 3\hspace{.46cm} 4\hspace{.46cm} 5\hspace{.46cm} 6\hspace{.46cm} 7\hspace{.46cm} 8\hspace{.46cm} 9\hspace{.35cm} 10\hspace{.285cm} 11\hspace{.285cm} 12\hspace{.285cm} 13\hspace{.285cm} 14\hspace{.285cm} 15\hspace{.285cm}16\hspace{.285cm}17\hspace{.285cm}18\hspace{.285cm}19\hspace{.285cm}20\hspace{.285cm}21\hspace{.285cm}22\hspace{.285cm}23\hspace{.285cm}24\hspace{.285cm}25
+\end{align*}
+
+
+
+The Sage command for computing $a^b\%p$ is \verb|power_mod(a,b,p)|. The Mathematica/WolframAlpha command for the same computation is \verb|PowerMod(a,b,p)|. 
+\vfill
+
+
+
+
+
+\newpage
+
+\begin{questions}
+\question You believe that ``summerbreak" has been encrypted to ``KOZEYETLRSE" using a Vigenere cipher. What can you say about the key of that cipher?
+\vfill 
+\question Let $a,b,c$ be integers. Prove that $\gcd(\gcd(a,b),c)=\gcd(a,\gcd(b,c))$. 
+\vfill
+\newpage
+\question Let $n$ be an integer. Prove that $4n$ is a unit modulo $8n+1$. 
+\vfill 
+\question Define $\gcd(a,b,c)=\gcd(\gcd(a,b),c).$ Prove that, if $\gcd(a,b,c)=d$, then there are integers $x,y,z$ such that $ax+by+cz=d$. 
+
+\vfill
+\newpage
+
+\question Use the Euclidean Algorithm to find the multiplicative inverse of $2023$ modulo $7078$.
+\vfill 
+\question Show that $x^2+2xy^2+y^4=3$ has no solutions for integers $x$ and $y$. 
+\vfill
+ \newpage
+
+
+\question Suppose that $f$ and $g$ are two polynomials with integer coefficients and that the product $f(x)\cdot g(x)\equiv 0\pmod{p}$ for a fixed prime $p$ and all integers $x$. Show that, for each integer $x$, either $f(x)\equiv 0\pmod{p}$ or $g(x)\equiv 0\pmod{p}$. (Note that this problem does not require either $f$ or $g$ to be the zero polynomial mod $p$. For example, if $p=3$, then $f=x$ and $g=(x-1)(x-2)$ satisfies the hypotheses of this problem.)
+\vfill
+\newpage
+\question Find all solutions to the following system of congruences for integers $0\le r,s<55$ or explain why none exist. 
+
+$$\systeme*{4r+6s\equiv 6 \pmod{55}, 3r+7s\equiv 12\pmod{55}}$$
+
+ \vfill
+
+    \newpage
+\question Use the fact that $17^{2914}\equiv 312\pmod{8743}$ to prove that $8743$ is not prime. 
+
+\vfill 
+   \question Is $11$ a square modulo $127$? Prove your answer without computing $x^2\%127$ for more than one value of $x$.  
+
+\vfill
+
+          
+          
+          \bigskip
+   
+  
+
+
+\end{questions}
+
+
+\end{document}
