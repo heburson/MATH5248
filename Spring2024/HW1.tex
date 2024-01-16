@@ -1,0 +1,63 @@
+   \documentclass[12pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath,amsthm}
+\usepackage{fullpage}
+\usepackage{amsfonts}
+\usepackage{amssymb,multicol}
+\usepackage{hyperref, enumitem}
+\usepackage{xcolor,graphicx}
+
+\newcommand{\Z}{\mathbb{Z}}
+\newtheorem*{theorem}{Theorem}
+
+\newlist{checklist}{itemize}{2}
+\setlist[checklist]{label=$\square$}
+
+\begin{document}
+\begin{center}
+{\Large Homework 1}\\
+Due: Friday,  February 2 at noon CST\\
+
+
+\end{center}
+{\bf Instructions:} Submit a pdf of your solutions to the HW 1 assignment on Gradescope. 
+
+When working on this assignment, you should focus on the following goals:
+\begin{itemize}
+\item Demonstrate that you understand the definition of reduction modulo $m$ and how it relates to the division algorithm. 
+\item Clearly communicate computational solutions using complete sentences and enough explanation that another 5248 student could follow your work.
+\item Clearly and correctly apply the definition of divisibility in a proof. 
+\item Clearly and correctly apply the division algorithm in a proof.
+\item Write clear and correct proofs that meet the following conventions of a mathematical proof:
+\begin{checklist}
+\item Written in complete sentences.
+\item All assumptions stated at the beginning of the proof.
+\item Define variables before/when you use them.
+\item Use symbols when writing a precise mathematical formula or equation and English words when not writing a formula (i.e. do not use a symbol, such as $\forall,\, \exists,\, \therefore, \, \implies$ in place of a word or phrase.)
+\item Show computational/algebraic work vertically and centered in the page. 
+\end{checklist}
+\end{itemize}
+
+\begin{enumerate}
+\item Compute the following reductions.  Explain your steps.  For parts (a) and (c), show your work without using any integers larger than 144. 
+\begin{enumerate}
+
+\item $(131\cdot 142) \% 3$ \\
+\item $(-2000) \% 93$\\
+\item $\left(3^{74}\right) \% 13$ 
+\end{enumerate}
+\item
+\begin{enumerate}
+\item  Let $N$ be an integer so that $N\%24 = 2$.  What is $N\%6$?  Prove that your answer is true for any integer $N$ such that $N\%24=2$.
+\item Fix an integer $N$ such that $N\%6=2$. What are the possible values of $N\%24$? Explain your answer. 
+\end{enumerate}
+
+\item Using the division algorithm, show that $x^3+2=0$ cannot have any integer solutions. (Note: you should have most of this problem completed from the in-class activity.)
+
+\item Let $a$, $b$, and $c$ be integers such that $a|b$ and $a|c$. Prove that,  for any integers $u$ and $v$, $a|ub+vc$. 
+\item Let $m$ be any positive integer. Prove that  if $r$ is the reduction of $N$ modulo $m$ with $r\ne 0$, then $m-r$ is the reduction of $-N$ modulo $m$.  (Note: you likely have a lot of this problem completed from the in-class activity!)
+
+
+\end{enumerate}
+
+\end{document}
