@@ -1,0 +1,60 @@
+   \documentclass[12pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath,amsthm}
+\usepackage{fullpage}
+\usepackage{amsfonts}
+\usepackage{amssymb,multicol}
+\usepackage[colorlinks=true,urlcolor=blue]{hyperref}
+\usepackage{enumitem}
+\usepackage{xcolor}
+
+\newcommand{\Z}{\mathbb{Z}}
+\newtheorem*{theorem}{Theorem}
+
+\newlist{checklist}{itemize}{2}
+\setlist[checklist]{label=$\square$}
+
+\begin{document}
+\begin{center}
+{\Large Homework 2}\\
+Due: Friday,  February 10 at noon\\
+
+
+\end{center}
+{\bf Instructions:} Submit a pdf of your solutions to the HW 2 assignment on Gradescope. 
+
+When working on this assignment, you should focus on the following goals:
+\begin{itemize}
+\item Demonstrate that you understand how to write a complete set of equivalence classes modulo $m$ and when two equivalence classes are equal. 
+\item Demonstrate understanding of the definition of a unit modulo $m$.  
+\item Use examples to determine if a conjecture is true and then prove or disprove the conjecture. 
+\item Write clear and correct proofs that meet the Writing Guidelines posted on Canvas. Focus especially on the following guidelines/conventions:
+\begin{checklist}
+\item Written in complete sentences.
+\item All assumptions stated at the beginning of the proof.
+\item Define variables before/when you use them.
+\item Use symbols when writing a precise mathematical formula or equation and English words when not writing a formula (i.e. do not use a symbol, such as $\forall,\, \exists,\, \therefore, \, \implies$ in place of a word or phrase.)
+\item Show computational/algebraic work vertically and centered in the page. 
+\end{checklist}
+\end{itemize}
+
+\begin{enumerate}
+
+\item Suppose you know that the plaintext ``snow" has been encoded to the ciphertext ``IlXM." Explain why the cipher used could not have been a shift cipher.
+\item Consider an affine cipher with key $(5,4)$. 
+\begin{enumerate}
+\item Encrypt the word ``cryptology" using that cipher. 
+\item You receive the ciphertext ``DAROVSWR". What linear congruence equations must you solve to decrypt this text?
+\end{enumerate}
+
+
+\item Prove or disprove each of the following statements.
+\begin{enumerate}
+\item For integers $a$, $b$, $c$, and $m$ with $m,c>0$, if $a\equiv b\pmod{mc}$, then $a\equiv b\pmod{m}$. 
+\item For integers $a$, $b$, $c$, and $m$ with $m,c>0$, if $a\equiv b\pmod{m}$, then $a\equiv b\pmod{mc}$. 
+\end{enumerate} 
+\item Suppose that $a=bq+r$, for some integers $a,b, q$ and $r$. Without using any properties of the $\gcd$ besides the definition as the largest common divisor of $x$ and $y$, prove that $\gcd(a,b)=\gcd(b,r)$.  (Hint: Prove that the set of common divisors of $a$ and $b$ is exactly the same as the set of common divisors of $b$ and $r$.)
+
+\end{enumerate}
+
+\end{document}
