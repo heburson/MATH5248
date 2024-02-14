@@ -1,0 +1,77 @@
+   \documentclass[12pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath,amsthm}
+\usepackage{fullpage}
+\usepackage{amsfonts}
+\usepackage{amssymb,multicol}
+\usepackage[colorlinks=true,urlcolor=blue]{hyperref}
+\usepackage{enumitem}
+\usepackage{xcolor}
+
+\newcommand{\Z}{\mathbb{Z}}
+\newtheorem*{theorem}{Theorem}
+
+\newlist{checklist}{itemize}{2}
+\setlist[checklist]{label=$\square$}
+
+\begin{document}
+\begin{center}
+{\Large Homework 4}\\
+Due: Friday,  February 23 at noon\\
+
+
+\end{center}
+{\bf Instructions:} Submit a pdf of your solutions to the HW 3 assignment on Gradescope.  {\bf You must complete the process by associating the proper page(s) to each question.} (If you fail to do so, you may earn ``not assessable" on all problems.)\\[3pt]
+
+\noindent When working on this assignment, you should focus on the following goals:
+\begin{itemize}
+\item Demonstrate understanding of Euclid's Lemma.
+\item Demonstrate understanding of how to compute the index of coincidence.
+\item Demonstrate understanding of how to use the Mutual Index of Coincidence to determine information about a Vigen\'ere Cipher Key.
+\item Write clear and correct proofs and disproofs (explanations of counterexamples) that meet the Writing Guidelines posted on Canvas. Focus especially on the following guidelines/conventions:
+\begin{checklist}
+\item All conventions enumerated in the HWs1-3 instructions.
+\item Write full and properly formed sentences, and include all equations in a sentence (including proper punctuation at the end).
+\end{checklist}
+\end{itemize}
+
+\begin{enumerate}
+\item This exercise will help us work towards understanding square roots, which will come up later in the semester. 
+\begin{enumerate}
+\item Let $p$ be a prime number and let $b$ be an integer such that $x^2\equiv b\pmod{p}$ has a solution.  Show that,  if $a_1$ and $a_2$ are two such solutions, then $a_1\equiv a_2\pmod{p}$ or $a_1\equiv -a_2\pmod{p}$. 
+\item Provide a counterexample to show that the above statement is not necessarily true if $p$ is not prime. In other words, provide integers $m$, $b$, $a_1$, and $a_2$ such that $a_1^2\equiv b\pmod{m}$, $a_2^2\equiv b\pmod{m}$, but $a_1\not \equiv \pm a_2 \pmod{m}$. Make sure you explain why your counterexample is, in fact, a counterexample. 
+\end{enumerate}
+\item Consider an alphabet with four characters: $\spadesuit$, $\heartsuit$, $\diamondsuit$, and $\clubsuit$.  Suppose that you have a text $\underline{s}$ written in this alphabet which consists of $60$ $\spadesuit$s,  $14$ $\heartsuit$s, $20$ $\diamondsuit$s, and $6$ $\clubsuit$s.  What is $\textrm{IndCo}(\underline{s})$?
+\item  (You started this problem in class) You are trying to attack a Vigenere cipher.  You have already determined that this Vigenere cipher has key length $4$.  If $\underline{s} = (s_1, \ldots, s_{N})$ is a string of ciphertext of length $N$ with $N \equiv 0 \pmod4$, let $s^{(j)} = (s_j,s_{4+j},s_{8+j},\ldots,s_{N-4+j})$ be the substring of $s$ whose typical entry is $s_i$ for some $i \equiv j \pmod 4$.  Let $E_t(s^{(j)})$ be the encryption of the string $s^{(j)}$ by the shift cipher with key $t$ for $0 \leq t \leq 25$ and $1 \leq j \leq 4$ (i.e. the string obtained by taking $s^{(j)}$ and shifting each character forward by $t$ letters).  You compute the following table:
+
+\begin{center}
+    \begin{tabular}{ l | l | l | l }
+    $t$ & $\mathrm{MutIndCo}(s^{(1)},E_t(s^{{(2)}}))$ & $\mathrm{MutIndCo}(s^{(1)},E_t(s^{{(3)}}))$  & $\mathrm{MutIndCo}(s^{(1)},E_t(s^{{(4)}}))$  \\ \hline
+    3 & 0.057 & 0.031 & 0.036 \\     
+    5 & 0.035 & 0.041 & 0.054 \\ 
+    8& 0.052 & 0.072 & 0.042\\ 
+    11 & 0.064 & 0.058 & 0.039\\ 
+    16 & 0.029 & 0.065 & 0.068 \\ 
+    23 & 0.035 & 0.037 & 0.051
+    \end{tabular}
+      \begin{tabular}{ l | l | l}
+    $t$ & $\mathrm{MutIndCo}(s^{(2)},E_t(s^{{(3)}}))$ & $\mathrm{MutIndCo}(s^{(2)},E_t(s^{{(4)}}))$\\ \hline
+    3 & 0.033 & 0.041 \\     
+    5 & 0.039 & 0.069\\ 
+    8 & 0.051 & 0. 038\\ 
+    11 & 0.037 & 0.061\\ 
+    16 & 0.045 & 0.052\\ 
+    23 & 0.061 & 0.035\\
+    \end{tabular}
+    \end{center} 
+    
+For the questions below, assume that,  values of $t$ not appearing in the table above gave rise values of $\mathrm{MutIndCo}(s^{(j)},E_t(s^{(k)}))$ that are unremarkable for all $1 \leq j<k \leq 4$.  
+\begin{enumerate}
+\item Given that the key has the form $k = (k_1, k_2 k_3,k_4)$, based on the data above, what are all likely values of $k_2-k_1$, $k_3-k_1$, and $k_4-k_1$? Explain your answer.
+\item  For what value(s) of $t$, would you expect $\mathrm{MutIndCo}(s^{(3)},E_t(s^{(4)}))$ to be large? Explain your answer.
+\end{enumerate}
+ \item Count the number of simple substitution ciphers on the English alphabet which map \textit{exactly} two letters to themselves. Show your work. (Note: This is just a minor variation of the problem done in class. Use that framework to help you and get the ball rolling.)
+
+\end{enumerate}
+
+\end{document}
