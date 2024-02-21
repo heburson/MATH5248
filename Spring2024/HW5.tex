@@ -1,0 +1,60 @@
+   \documentclass[12pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath,amsthm}
+\usepackage{fullpage}
+\usepackage{amsfonts}
+\usepackage{amssymb,multicol}
+\usepackage[colorlinks=true,urlcolor=blue]{hyperref}
+\usepackage{enumitem}
+\usepackage{xcolor,systeme}
+
+\newcommand{\Z}{\mathbb{Z}}
+\newtheorem*{theorem}{Theorem}
+\newtheorem*{lemma}{Lemma}
+
+\newlist{checklist}{itemize}{2}
+\setlist[checklist]{label=$\square$}
+
+\begin{document}
+\begin{center}
+{\Large Homework 5}\\
+Due: Friday,  March 1 at noon\\
+
+
+\end{center}
+{\bf Instructions:} Submit a pdf of your solutions to the HW 5 assignment on Gradescope.  {\bf You must complete the process by associating the proper page(s) to each question.} (If you fail to do so, you may earn ``not assessable" on any problems that do not have solutions matched to them.)\\[3pt]
+
+\noindent When working on this assignment, you should focus on the following goals:
+\begin{itemize}
+\item Demonstrate understanding of solving systems of equations and/or showing that a system of equations has no solutions.
+\item Demonstrate understanding of the Hill Cipher. 
+\item Demonstrate understanding of Bezout's identity by using it clearly and correctly in a proof. 
+\item Write a clear and correct proof by induction. 
+\end{itemize}
+
+\begin{enumerate}
+ \item  A friend sends you the encrypted message $ET$ using a Hill cipher whose key you and your friend agreed at a previous meeting would be $K = \begin{pmatrix}
+6 & 7\\ 
+11 & 5
+\end{pmatrix}$.  What is the plaintext of the message your friend sent you?\\
+
+\item Solve the following simultaneous system of congruences or explain why no solution exists.(Note that your final answer should be of the form $x\equiv a\pmod{m}$ for appropriate choices of $a$ and $m$.)
+$$\systeme*{x\equiv 5\pmod{13}, x\equiv 2\pmod{7}\;\;, x\equiv 4 \pmod{11}}$$
+
+\item Solve each of the following simultaneous system of congruences or explain why no solution exists. (Note that your final answers should be of the form $x\equiv a\pmod{m}$ for appropriate choices of $a$ and $m$.)
+\begin{enumerate}
+\item $\systeme*{x\equiv 3\pmod{9}, x\equiv 2\pmod 6, x\equiv 1\pmod{5}}$
+\item $\systeme*{x\equiv 5\pmod{9}, x\equiv 2\pmod 6, x\equiv 1\pmod{5}}$
+\end{enumerate}
+\item This problem will complete the proof of the CRT by helping you prove the important lemma we used without proof in class.
+\begin{enumerate}
+\item Prove that, if $a$ and $b$ are coprime integers and $a,b|c$, then $ab|c$. (Hint: Use Bezout's identity.)
+\item Using induction with part (a) as the base case, prove the following lemma.
+\begin{lemma} If $a_1,a_2,\ldots, a_k|c$ and $a_1,a_2,\ldots, a_k$ are pairwise coprime, then $a_1a_2\cdots a_k|c$. 
+\end{lemma}
+(Remark: You may cite the result of part a in your proof of part b.)
+\end{enumerate}
+
+\end{enumerate}
+
+\end{document}
