@@ -1,0 +1,64 @@
+ \documentclass[12pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath,amsthm}
+\usepackage{fullpage}
+\usepackage{amsfonts}
+\usepackage{amssymb,multicol}
+\usepackage[colorlinks=true,urlcolor=blue]{hyperref}
+\usepackage{enumitem}
+\usepackage{xcolor,systeme}
+
+\newcommand{\Z}{\mathbb{Z}}
+\newtheorem*{theorem}{Theorem}
+\newtheorem*{lemma}{Lemma}
+
+\newlist{checklist}{itemize}{2}
+\setlist[checklist]{label=$\square$}
+
+\begin{document}
+\begin{center}
+{\Large Homework 8}\\
+Due: Friday,  April 12 at noon\\
+
+
+\end{center}
+{\bf Instructions:} Submit a pdf of your solutions to the HW 8 assignment on Gradescope.  {\bf You must complete the process by associating the proper page(s) to each question.} (If you fail to do so, you may earn ``not assessable" on any problems that do not have solutions matched to them.)\\[3pt]
+
+On this assignment, the main learning objectives being assessed and the grading criteria for each problem is included under the problem statement.  If you are unsure about the meaning of a criterion, ask Dr. Burson.  
+
+\begin{enumerate}
+
+
+\item You are setting up an RSA cipher with modulus $5021131$.  You may use the fact that $5021131 = 1907(2633)$.  You may want to use a computer to do most of the exponentiation computations on this problem. {\bf However, in parts a and b,  you must show your work for any inverses you find using the Extended Euclidean Algorithm. }
+\begin{enumerate}
+\item Is $5$ a valid encryption key?  If so, find the corresponding decryption key.  If not, explain why not.
+
+\item Is $7$ a valid encryption key?  If so, find the corresponding decryption key.  If not, explain why not.
+
+\item The encryption key $e = 3$ is valid for the modulus $5021131$ and corresponds to the decryption key $d = 3344395$.  If you are setting up a public key with this information, what is all of the information that you would post publicly so that a friend could send you an encrypted message?  What is all of the information relevant to this cipher that you would keep secret?
+\end{enumerate}
+{\bf Learning objectives:} (1) Explain all of the components and requirements for the RSA cryptosystem.  (2) Use the Euclidean Algorithm to find inverses modulo m. \\
+{\bf Grading Criteria:} Final answers are correct and the work leading up to them is clear, legible, and written for the audience of other MATH 5248 students; Explanations for part (a) and (b) demonstrate understanding of how encryption and decryption keys are related; Work is shown for computing inverses using the Extended Euclidean Algorithm; Answer to part (c) demonstrates understanding of what information is public and what information is private when using RSA. 
+
+
+\item For this problem, you are using an RSA cipher with modulus $1749551$.  Again, you may want to use a computer to do most of the computation for this problem. \\
+\begin{enumerate}
+\item If your plaintext is represented by $x = 884204$, use the encryption key $e = 7$ to encrypt $x$.
+\item You have received the ciphertext message $y = 384$.  Use the decryption key $d =952691$ to decrypt the message.  
+
+\end{enumerate}
+{\bf Learning objectives:} (1) Encrypt messages using RSA. (2) Decrypt messages using RSA. \\
+{\bf Grading Criteria:} Final answer is correct and the work leading up to it is clear, legible, and written for the audience of other MATH 5248 students; Work shows understanding of the stated learning objectives. 
+
+
+\item You know that an enemy has been encrypting messages using RSA and that the recipient's RSA modulus is $N = 580,799$.  (Because the RSA modulus is public information, this setup is plausible except for the very small size of $580,799$ as an RSA modulus.)  You would like to perform an attack on their RSA setup so that you can read their encrypted messages.  Magically, you have access to a square root oracle!  (This part of the setup is not plausible.  If square root oracles existed, RSA would not be secure.)  \\[1em]
+You compute $1234^2\equiv 361,158 \pmod{580,799}$ and ask your magical square root oracle for another square root of $361,158 $ modulo $580,799$. Your square root oracle tells you that $83,340^2\equiv 361,158 \pmod{580,799}$.  Can you use the information given to you by the square root oracle to factor $580,799$?  If so, do it.  If not, explain why not.  If you compute any GCDs when doing this problem, you must show your work using the Euclidean Algorithm. \\
+{\bf Learning objectives:} (1) Implement the square root attack on RSA.\\
+{\bf Grading criteria:} Final answer is correct and the work leading up to it is clear, legible, and written for the audience of other MATH 5248 students; Work for the Euclidean Algorithm is shown; No major computational, logical, factual, or semantic errors in the work.  
+
+\item You are upset that your older sister is keeping secrets from you and you want to find out what she is saying. Luckily for you, her friends are not very knowledgeable about RSA and make poor exponent choices when picking their keys.  Your sister sends the same message, which is encoded as the integer $M$, to her three best friends.  Her friends all choose the encryption exponent $3$ and pick three different moduli: $N_1=17363$,$N_2=17473$, and $N_3=18419$.  You intercept the ciphertexts $C_1=2589$, $C_2=2388$, and $C_3=14968$, where the ciphertext $C_i$ corresponds to the modulus $N_i$.  Using H\r{a}nstad's Broadcast Attack, figure out the value of $M$. \\
+{\bf Learning Objectives:} (1) Implement H\r{a}nstad's Broadcast Attack. \\
+{\bf Grading criteria:} Final answer is correct and the work leading up to it is clear, legible, and written for the audience of other MATH 5248 students; It is clear that H\r{a}nstad's Broadcast Attack, as explained in the provided video, is used to find the solution; Solution does not require factoring any of the moduli, determining $\phi(N_i)$ for any $i$, or determining any of the private decryption exponents; No major computational, logical, factual, or semantic errors in the work.  
+\end{enumerate}
+
+\end{document}
