@@ -1,0 +1,59 @@
+ \documentclass[12pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath,amsthm}
+\usepackage{fullpage}
+\usepackage{amsfonts}
+\usepackage{amssymb,multicol}
+\usepackage[colorlinks=true,urlcolor=blue]{hyperref}
+\usepackage{enumitem}
+\usepackage{xcolor,systeme}
+
+\newcommand{\Z}{\mathbb{Z}}
+\newtheorem*{theorem}{Theorem}
+\newtheorem*{lemma}{Lemma}
+
+\newlist{checklist}{itemize}{2}
+\setlist[checklist]{label=$\square$}
+
+\begin{document}
+\begin{center}
+{\Large Homework 9}\\
+Due: Friday,  April 19 at noon\\
+
+
+\end{center}
+{\bf Instructions:} Submit a pdf of your solutions to the HW 9 assignment on Gradescope.  {\bf You must complete the process by associating the proper page(s) to each question.} (If you fail to do so, you may earn ``not assessable" on any problems that do not have solutions matched to them.)\\[3pt]
+
+On this assignment, the main learning objectives being assessed and the grading criteria for each problem is included under the problem statement.  If you are unsure about the meaning of a criterion, ask Dr. Burson.  
+
+\begin{enumerate}
+
+
+ \item Bruce would like to send Ada a message using her ElGamal cipher.  The public information that Ada has posted is that her prime modulus is $p = 157$, her primitive root modulo $157$ is $g = 5$, and (in the notation from the PGP) she has computed $A = 91$.    Bruce's message for Ada is the plaintext $m = 121$, and his secret exponent is $k = 14$.  What information should Bruce send to Ana in order to communicate the message $m = 121$ through her ElGmal cipher?  
+ 
+ \item  You are an enemy of Bruce and Ada and you want to be able to intercept their messages. As in the first problem,  the public information that Ada has posted is that her prime modulus is $p = 157$, her primitive root modulo $157$ is $g = 5$, and (in the notation from the PGP) she has computed $A = 91$.  You choose $15$ to be your exponent. 
+\begin{enumerate}
+\item You gain access to their network and replace Ada's value for A with your own. What number do you replace $A$ with?
+\item Bruce now receives your value for $A$ instead of Ada's. He chooses a secret exponent (that is different from the one in the previous problem) and encrypts his message as $(47,92)$. What was Bob's message?
+
+{\bf Learning objectives:} (1) Encrypt messages using El Gamal. (2) Perform an interceptor attack on El Gamal.  (3) Decrypt messages using El Gamal.
+{\bf Grading Criteria:} Final answers are correct and the work leading up to it is clear, legible, and written for the audience of other MATH 5248 students; Work shows understanding of the stated learning objectives; Work shown does not require determining Ada's secret exponent.
+\end{enumerate} 
+  
+
+ 
+ 
+ \item \begin{enumerate}
+ 
+ \item Fix a prime $p$ satisfying $p \equiv 3 \pmod 4$ and an integer $y \not \equiv 0 \pmod p$ that is a square modulo $p$.  If $x$ is the principal square root of $y$ modulo $p$, show that there \textbf{does not} exist an integer $z$ satisfying $z^2 \equiv -x \pmod p$ (i.e., show that $-x$ is not a square modulo $p$).
+ \item Show that the above statment is not necessarily true if $p\equiv 1\pmod{4}$. In other words, find a prime $p\equiv 1\pmod4$ and  integers $x$ and $y$ satisfying $x^2 \equiv y \not \equiv 0 \pmod p$ where $\textbf{both}$ $x$ and $-x$ have square roots modulo $p$.
+\end{enumerate}
+{\bf Learning objectives:} (1) Correctly and clearly use the theorem about the existence of principal square roots in a proof.  (2) Disprove a statement using a counterexample.\\
+{\bf Grading Criteria:} Proof and disproof are written for the audience of other MATH 5248 students; Proof/disproof shows understanding of the stated learning objectives; Proof for (a) clearly cites the theorem about the existence of principal square roots; Structure of the proof in (a) is clear (is it a direct proof? a proof by contradiction?); Explanation of counterexample in part (b) confirms that the counterexample satisfies the hypotheses of the statement but does not satisfy the conclusion; Proof meets the \href{https://docs.google.com/document/d/1ho0w0y2dzDVR0ruSVIkjd-5GZZm09FRdzrrZKSd81uk/edit?usp=sharing}{guidelines/specifications for a well-written proof}.
+
+\item Let $p$ be an odd prime. Prove that, if $a$ and $b$ are non-squares modulo $p$, then $ab$ is a square modulo $p$. 
+\\{\bf Learning objectives:} (1) Correctly and clearly use Euler's criterion in a proof.  \\
+{\bf Grading Criteria:} Proof is written for the audience of other MATH 5248 students; Proof shows understanding of the stated learning objectives; Proof clearly cites Euler's criterion; Structure of the proof is clear; Proof meets the \href{https://docs.google.com/document/d/1ho0w0y2dzDVR0ruSVIkjd-5GZZm09FRdzrrZKSd81uk/edit?usp=sharing}{guidelines/specifications for a well-written proof}.
+\end{enumerate}
+
+\end{document}
