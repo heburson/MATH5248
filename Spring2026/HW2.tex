@@ -1,0 +1,68 @@
+   \documentclass[12pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath,amsthm}
+\usepackage{fullpage}
+\usepackage{amsfonts}
+\usepackage{amssymb,multicol}
+\usepackage{hyperref, enumitem}
+\usepackage{xcolor,graphicx}
+
+\hypersetup{
+    colorlinks=true}
+
+\newcommand{\Z}{\mathbb{Z}}
+\newtheorem*{theorem}{Theorem}
+
+\newlist{checklist}{itemize}{2}
+\setlist[checklist]{label=$\square$}
+
+\begin{document}
+\begin{center}
+{\Large Homework 1}\\
+Due: Friday,  February 6 at 11:59pm CST\\
+
+
+\end{center}
+{\bf Instructions:} Submit a pdf of your solutions to the HW 2 assignment on Gradescope by 11:59pm on Friday February 13. 
+
+Problem 5 is marked as a peer review problem. \href{https://docs.google.com/document/d/1jSw9pmMJJFUx_6dTkcUi4k4HJNIrrIIgs9zdWhAycx0/edit?usp=drive_link}{This document} gives directions and deadlines for the peer review process.
+
+When working on this assignment, you should focus on the following goals:
+\begin{itemize}
+\item Clearly communicate computational solutions using enough explanation that another 5248 student could follow your work.
+\item Perform a known-plaintext attack on the affine cipher. 
+\item Use the Euclidean algorithm to find an inverse of one number modulo some integer. 
+\item Use examples to determine if a conjecture is true and then prove or disprove the conjecture. 
+\item Use the definition of a unit in a proof. 
+\item Use the definition of divisibility in a proof. 
+\item Write clear and correct proofs that meet the following conventions of a mathematical proof:
+\begin{checklist}
+\item Written in complete sentences.
+\item All assumptions stated at the beginning of the proof.
+\item Define variables before/when you use them.
+\item Use symbols when writing a precise mathematical formula or equation and English words when not writing a formula (i.e. do not use a symbol, such as $\forall,\, \exists,\, \therefore, \, \implies$ in place of a word or phrase.)
+\item Show computational/algebraic work vertically and centered in the page. 
+\end{checklist}
+\end{itemize}
+
+\begin{enumerate}
+\item[0.] If you would like any of these problems to be graded for proficiency with the core skills, list the skill and the corresponding problem. 
+\item Consider an affine cipher with key $(5,4)$. 
+\begin{enumerate}
+\item Encrypt the word ``cryptology" using that cipher. 
+\item Decrypt the ciphertext ``NS" using this cipher. Clearly state the linear congruences you are solving and show all of your steps for solving those congruences. 
+\end{enumerate}
+\item Two enemies of yours are passing messages using an affine cipher. You know that they always write formal notes starting with the greeting ``Hello" in the plaintext.  You intercept a ciphertext that starts with ``fkhhc." What key did they use?
+
+\item Let $n$ be a positive integer. Without using the Euclidean algorithm, prove that $n$ is a unit modulo $4n-1$.   
+
+
+\item Use the Euclidean Algorithm to find a multiplicative inverse of $206$ modulo $5427$. 
+
+\item (Peer review problem) Suppose that $a=bq+r$, for some integers $a,b, q$ and $r$. Without using any properties of the $\gcd$ besides the definition as the largest common divisor of $x$ and $y$, prove that $\gcd(a,b)=\gcd(b,r)$.  (Hint: Prove that the set of common divisors of $a$ and $b$ is exactly the same as the set of common divisors of $b$ and $r$.)
+
+
+
+\end{enumerate}
+
+\end{document}
