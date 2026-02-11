@@ -1,0 +1,89 @@
+   \documentclass[12pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath,amsthm}
+\usepackage{fullpage}
+\usepackage{amsfonts}
+\usepackage{amssymb,multicol}
+\usepackage{hyperref, enumitem}
+\usepackage{xcolor,graphicx}
+
+\hypersetup{
+    colorlinks=true}
+
+\newcommand{\Z}{\mathbb{Z}}
+\newtheorem*{theorem}{Theorem}
+
+\newlist{checklist}{itemize}{2}
+\setlist[checklist]{label=$\square$}
+
+\begin{document}
+\begin{center}
+{\Large Homework 3}\\
+
+
+\end{center}
+{\bf Instructions:} Submit a pdf of your solutions to the HW 3 assignment on Gradescope by 11:59pm on Friday February 20. 
+
+Problem 2 is marked as a peer review problem. \href{https://docs.google.com/document/d/1jSw9pmMJJFUx_6dTkcUi4k4HJNIrrIIgs9zdWhAycx0/edit?usp=drive_link}{This document} gives directions and deadlines for the peer review process.
+
+When working on this assignment, you should focus on the following goals:
+\begin{itemize}
+\item Clearly communicate computational solutions using enough explanation that another 5248 student could follow your work.
+\item Use Euclid's Lemma clearly and correctly in a proof.
+\item Use Bezout's identity clearly and correctly in a proof. 
+\item Demonstrate understanding of how to compute the index of coincidence.
+\item Demonstrate understanding of how to use the Mutual Index of Coincidence to determine information about a Vigen\'ere Cipher Key.
+\item Write clear and correct proofs that meet the following conventions of a mathematical proof:
+\begin{checklist}
+\item Written in complete sentences.
+\item All assumptions stated at the beginning of the proof.
+\item Define variables before/when you use them.
+\item Use symbols when writing a precise mathematical formula or equation and English words when not writing a formula (i.e. do not use a symbol, such as $\forall,\, \exists,\, \therefore, \, \implies$ in place of a word or phrase.)
+\item Show computational/algebraic work vertically and centered in the page. 
+\end{checklist}
+\end{itemize}
+
+\begin{enumerate}
+\item[0.] If you would like any of these problems to be graded for proficiency with the core skills, list the skill and the corresponding problem. 
+\item Let $a,b,c$ be nonzero integers. Prove that if $a$ and $c$ are coprime and $b$ and $c$ are also coprime, then $ab$ and $c$ are coprime. (Hint: Use Bezout's Identity)
+\item (Peer review problem) This exercise will help us work towards understanding square roots, which will come up later in the semester.  (Each part will be worth 4 points and graded as a separate problem.)
+\begin{enumerate}
+
+\item Let $p$ be a prime number and let $b$ be an integer such that $x^2\equiv b\pmod{p}$ has a solution.  Show that,  if $a_1$ and $a_2$ are two such solutions, then $a_1\equiv a_2\pmod{p}$ or $a_1\equiv -a_2\pmod{p}$. 
+\item Provide a counterexample to show that the above statement is not necessarily true if $p$ is not prime. In other words, provide integers $m$, $b$, $a_1$, and $a_2$ such that $a_1^2\equiv b\pmod{m}$, $a_2^2\equiv b\pmod{m}$, but $a_1\not \equiv \pm a_2 \pmod{m}$. Make sure you explain why your counterexample is, in fact, a counterexample. 
+\end{enumerate}
+\item Consider an alphabet with four characters: $\spadesuit$, $\heartsuit$, $\diamondsuit$, and $\clubsuit$.  Suppose that you have a text $\underline{s}$ written in this alphabet which consists of $60$ $\spadesuit$s,  $14$ $\heartsuit$s, $20$ $\diamondsuit$s, and $6$ $\clubsuit$s.  What is $\textrm{IndCo}(\underline{s})$?
+\item You are trying to attack a Vigenere cipher.  You have already determined that this Vigenere cipher has key length $4$.  If $\underline{s} = (s_1, \ldots, s_{N})$ is a string of ciphertext of length $N$ with $N \equiv 0 \pmod4$, let $s^{(j)} = (s_j,s_{4+j},s_{8+j},\ldots,s_{N-4+j})$ be the substring of $s$ whose typical entry is $s_i$ for some $i \equiv j \pmod 4$.  Let $E_t(s^{(j)})$ be the encryption of the string $s^{(j)}$ by the shift cipher with key $t$ for $0 \leq t \leq 25$ and $1 \leq j \leq 4$ (i.e. the string obtained by taking $s^{(j)}$ and shifting each character forward by $t$ letters).  You compute the following table:
+
+\begin{center}
+    \begin{tabular}{ l | l | l | l }
+    $t$ & $\mathrm{MutIndCo}(s^{(1)},E_t(s^{{(2)}}))$ & $\mathrm{MutIndCo}(s^{(1)},E_t(s^{{(3)}}))$  & $\mathrm{MutIndCo}(s^{(1)},E_t(s^{{(4)}}))$  \\ \hline
+    4 & 0.057 & 0.031 & 0.036 \\     
+    5 & 0.035 & 0.041 & 0.054 \\ 
+    7& 0.052 & 0.069 & 0.042\\ 
+    12 & 0.064 & 0.058 & 0.039\\ 
+    14 & 0.029 & 0.065 & 0.068 \\ 
+    22 & 0.035 & 0.037 & 0.051
+    \end{tabular}
+      \begin{tabular}{ l | l | l}
+    $t$ & $\mathrm{MutIndCo}(s^{(2)},E_t(s^{{(3)}}))$ & $\mathrm{MutIndCo}(s^{(2)},E_t(s^{{(4)}}))$\\ \hline
+    3 & 0.033 & 0.041 \\     
+    5 & 0.039 & 0.069\\ 
+    8 & 0.051 & 0.038\\ 
+    11 & 0.037 & 0.061\\ 
+    16 & 0.045 & 0.052\\ 
+    23 & 0.061 & 0.035\\
+    \end{tabular}
+    \end{center} 
+    
+For the questions below, assume that,  values of $t$ not appearing in the table above gave rise values of $\mathrm{MutIndCo}(s^{(j)},E_t(s^{(k)}))$ that are unremarkable for all $1 \leq j<k \leq 4$.  
+\begin{enumerate}
+\item Given that the key has the form $k = (k_1, k_2 k_3,k_4)$, based on the data above, what are all likely values of $k_2-k_1$, $k_3-k_1$, and $k_4-k_1$? Explain your answer.
+\item  For what value(s) of $t$, would you expect $\mathrm{MutIndCo}(s^{(3)},E_t(s^{(4)}))$ to be large? Explain your answer.
+\end{enumerate}\
+
+
+
+\end{enumerate}
+
+\end{document}
