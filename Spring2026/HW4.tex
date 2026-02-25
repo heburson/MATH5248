@@ -1,0 +1,69 @@
+   \documentclass[12pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath,amsthm}
+\usepackage{fullpage}
+\usepackage{amsfonts}
+\usepackage{amssymb,multicol}
+\usepackage{hyperref, enumitem, systeme}
+\usepackage{xcolor,graphicx}
+
+\hypersetup{
+    colorlinks=true}
+
+\newcommand{\Z}{\mathbb{Z}}\newtheorem*{theorem}{Theorem}
+\newtheorem*{lemma}{Lemma}
+
+\newlist{checklist}{itemize}{2}
+\setlist[checklist]{label=$\square$}
+
+\begin{document}
+\begin{center}
+{\Large Homework 4}\\
+
+
+\end{center}
+{\bf Instructions:} Submit a pdf of your solutions to the HW 4 assignment on Gradescope by 11:59pm on Friday March 6. 
+
+Problem 5 is marked as a peer review problem. \href{https://docs.google.com/document/d/1jSw9pmMJJFUx_6dTkcUi4k4HJNIrrIIgs9zdWhAycx0/edit?usp=drive_link}{This document} gives directions and deadlines for the peer review process.
+
+When working on this assignment, you should focus on the following goals:
+\begin{itemize}
+\item Clearly communicate computational solutions using enough explanation that another 5248 student could follow your work.
+\item Demonstrate understanding of solving systems of equations and/or showing that a system of equations has no solutions.
+\item Demonstrate understanding of the Hill Cipher. 
+\item Use Bezout's identity clearly and correctly in a proof. 
+\item Write clear and correct proofs that meet the following conventions of a mathematical proof:
+\begin{checklist}
+\item Written in complete sentences.
+\item A proper set-up including a statement of assumptions at the beginning of the proof. 
+\item Define variables before/when you use them.
+\item Use symbols when writing a precise mathematical formula or equation and English words when not writing a formula (i.e. do not use a symbol, such as $\forall,\, \exists,\, \therefore, \, \implies$ in place of a word or phrase.)
+\item Show computational/algebraic work vertically and centered in the page. 
+\end{checklist}
+\end{itemize}
+
+\begin{enumerate}
+\item[0.] If you would like any of these problems to be graded for proficiency with the key skills (listed in the syllabus), list the skill and the corresponding problem and submit that for problem 0 on Gradescope. 
+ \item  A friend sends you the encrypted message $ET$ using a Hill cipher whose key you and your friend agreed at a previous meeting would be $K = \begin{pmatrix}
+6 & 7\\ 
+11 & 5
+\end{pmatrix}$.  What is the plaintext of the message your friend sent you?\\
+
+\item Solve the following simultaneous system of congruences or explain why no solution exists. (Note that your final answer should be of the form $x\equiv a\pmod{m}$ for appropriate choices of $a$ and $m$.)
+$$\systeme*{x\equiv 5\pmod{13}, x\equiv 2\pmod{7}\;\;, x\equiv 4 \pmod{11}}$$
+
+\item Solve each of the following simultaneous system of congruences or explain why no solution exists. (Note that your final answers should be of the form $x\equiv a\pmod{m}$ for appropriate choices of $a$ and $m$.)
+\begin{multicols}{2}
+\begin{enumerate}
+\item $\systeme*{x\equiv 3\pmod{9}, x\equiv 2\pmod 6, x\equiv 1\pmod{5}}$
+\item $\systeme*{x\equiv 5\pmod{9}, x\equiv 2\pmod 6, x\equiv 1\pmod{5}}$
+\end{enumerate}
+\end{multicols}
+ \item Martha is sending a message talking about how great her sister is.  Martha has encrypted her message using a Hill cipher with a $2\times 2$ key.  You know that she has encrypted the word ``best" to the ciphertext ``JCTF".  What are all possible keys to Martha's Hill cipher? (There may be one or more possible keys.) 
+\item (Peer Review Problem) Prove that, if $a$ and $b$ are coprime integers and $a,b|c$, then $ab|c$. (Hint: Use Bezout's identity.)
+
+(Remark: We used a more general version of this proposition in our proof of the CRT!)
+
+\end{enumerate}
+
+\end{document}
