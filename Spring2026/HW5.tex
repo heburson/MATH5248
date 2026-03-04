@@ -1,0 +1,60 @@
+   \documentclass[12pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath,amsthm}
+\usepackage{fullpage}
+\usepackage{amsfonts}
+\usepackage{amssymb,multicol}
+\usepackage{hyperref, enumitem, systeme}
+\usepackage{xcolor,graphicx}
+
+\hypersetup{
+    colorlinks=true}
+
+\newcommand{\Z}{\mathbb{Z}}\newtheorem*{theorem}{Theorem}
+\newtheorem*{lemma}{Lemma}
+
+\newlist{checklist}{itemize}{2}
+\setlist[checklist]{label=$\square$}
+
+\begin{document}
+\begin{center}
+{\Large Homework 5}\\
+
+
+\end{center}
+{\bf Instructions:} Submit a pdf of your solutions to the HW 5 assignment on Gradescope by 11:59pm on Friday March 20. 
+
+Problem 3 is marked as a peer review problem. \href{https://docs.google.com/document/d/1jSw9pmMJJFUx_6dTkcUi4k4HJNIrrIIgs9zdWhAycx0/edit?usp=drive_link}{This document} gives directions and deadlines for the peer review process.
+
+When working on this assignment, you should focus on the following goals:
+\begin{itemize}
+\item Clearly communicate computational solutions using enough explanation that another 5248 student could follow your work.
+\item Use Fermat's Little Theorem clearly and correctly in computations and proofs.
+\item Use Euler's Theorem clearly and correctly in computations and proofs. 
+\item Compute and explain the order of an element modulo $m$. 
+\item Write clear and correct proofs that meet the following conventions of a mathematical proof:
+\begin{checklist}
+\item Written in complete sentences.
+\item A proper set-up including a statement of assumptions at the beginning of the proof. 
+\item Define variables before/when you use them.
+\item Use symbols when writing a precise mathematical formula or equation and English words when not writing a formula (i.e. do not use a symbol, such as $\forall,\, \exists,\, \therefore, \, \implies$ in place of a word or phrase.)
+\item Show computational/algebraic work vertically and centered in the page. 
+\end{checklist}
+\end{itemize}
+
+\begin{enumerate}
+\item[0.] If you would like any of these problems to be graded for proficiency with the key skills (listed in the syllabus), list the skill and the corresponding problem and submit that for problem 0 on Gradescope. 
+ \item Use Fermat's Little Theorem to prove that $9873$ is not a prime number.  (Note: You may use an online calculator such as WolframAlpha to compute large powers modulo $m$.)
+ 
+ \item Use Euler's Theorem to compute $9^{135} \%{25}$.  Clearly cite where you use Euler's Theorem and what hypotheses you confirmed to ensure you could use it.
+
+
+\item (Peer review problem) Prove that the equation $r^{32}+17t=4$ has no solutions for integers $r$ and $t$. 
+
+\item Prove that, if $p$ is prime and $a\equiv a^{-1}\pmod{p}$, then $a\equiv 1\pmod{p}$ or $a\equiv -1\pmod{p}$. 
+
+\item Compute the order of $9$ modulo $25$. State your final answer in a complete sentence with justification. 
+
+\end{enumerate}
+
+\end{document}
