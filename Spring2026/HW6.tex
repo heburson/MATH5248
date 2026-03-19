@@ -1,0 +1,51 @@
+   \documentclass[12pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath,amsthm}
+\usepackage{fullpage}
+\usepackage{amsfonts}
+\usepackage{amssymb,multicol}
+\usepackage{hyperref, enumitem, systeme}
+\usepackage{xcolor,graphicx}
+
+\hypersetup{
+    colorlinks=true}
+
+\newcommand{\Z}{\mathbb{Z}}\newtheorem*{theorem}{Theorem}
+\newtheorem*{lemma}{Lemma}
+
+\newlist{checklist}{itemize}{2}
+\setlist[checklist]{label=$\square$}
+
+\begin{document}
+\begin{center}
+{\Large Homework 6}\\
+
+
+\end{center}
+{\bf Instructions:} Submit a pdf of your solutions to the HW 6 assignment on Gradescope by 11:59pm on Friday March 27. \\[3pt]
+
+\noindent Problem 3 is marked as a peer review problem. \href{https://docs.google.com/document/d/1jSw9pmMJJFUx_6dTkcUi4k4HJNIrrIIgs9zdWhAycx0/edit?usp=drive_link}{This document} gives directions and deadlines for the peer review process.
+\\[3pt]
+
+\noindent{\bf Technology tip:} You will want to use technology to do many of the computations in this assignment. In WolframAlpha, \verb|PowerMod[a,b,m]| will return the value of $a^b\% m$. In sage, \verb|power_mod(a,b,m)| will return the same value. \\
+
+\begin{enumerate}
+\item[0.] If you would like any of these problems to be graded for proficiency with the key skills (listed in the syllabus), list the skill and the corresponding problem and submit that for problem 0 on Gradescope. 
+\item Determine whether or not $3$ is a primitive root modulo $19$ without computing all of the powers of $3$ modulo $19$. \\
+ 
+ \item  Explain why $6$ is not a primitive root modulo $34$ without computing \emph{any} of the powers of $6$ modulo $34$. \\
+
+
+\item (Peer review problem)  Prove that, if $a$ is a primitive root modulo $p$, then $a^{-1}$ (the multiplicative inverse of $a$ modulo $p$) is also a primitive root modulo $p$. \\
+
+ \item Bob and Alice would like to use the Diffie-Hellman Key Exchange to agree on a session key $k$. Alice and Bob agree on the prime $6829$ and that the base $2$ modulo $6829$. Bob chooses a secret random number $x$ and tells Alice that $2^x\%6829$ is $5792$. Alice chooses $3$ as her secret exponent.  Answer the following questions without computing the value of $x$.  
+\begin{enumerate}
+\item What is the shared secret key $k$ that Alice and Bob will be using? 
+\item You are able to gain access to the network Alice and Bob are using to communicate, so you decide to implement a interceptor attack with exponent $c=10$. What key does Bob think he and Alice agreed to? What key does Alice think they agreed to?
+\end{enumerate}	
+
+\item Use the baby-step/giant step algorithm to solve the discrete logarithm problem $$11^x\equiv 21\pmod{71}.$$
+
+\end{enumerate}
+
+\end{document}
