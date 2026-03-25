@@ -1,0 +1,65 @@
+   \documentclass[12pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath,amsthm}
+\usepackage{fullpage}
+\usepackage{amsfonts}
+\usepackage{amssymb,multicol}
+\usepackage{hyperref, enumitem, systeme}
+\usepackage{xcolor,graphicx}
+
+\hypersetup{
+    colorlinks=true}
+
+\newcommand{\Z}{\mathbb{Z}}\newtheorem*{theorem}{Theorem}
+\newtheorem*{lemma}{Lemma}
+
+\newlist{checklist}{itemize}{2}
+\setlist[checklist]{label=$\square$}
+
+\begin{document}
+\begin{center}
+{\Large Homework 7}\\
+
+
+\end{center}
+{\bf Instructions:} Submit a pdf of your solutions to the HW 7 assignment on Gradescope by 11:59pm on Friday April 3. \\[3pt]
+
+\noindent Problem 5 is marked as a peer review problem. \href{https://docs.google.com/document/d/1jSw9pmMJJFUx_6dTkcUi4k4HJNIrrIIgs9zdWhAycx0/edit?usp=drive_link}{This document} gives directions and deadlines for the peer review process.
+\\[3pt]
+
+\noindent{\bf Technology tip:} You will want to use technology to do many of the computations in this assignment. In WolframAlpha, \verb|PowerMod[a,b,m]| will return the value of $a^b\% m$. In sage, \verb|power_mod(a,b,m)| will return the same value. \\
+
+\begin{enumerate}
+\item[0.] If you would like any of these problems to be graded for proficiency with the key skills (listed in the syllabus), list the skill and the corresponding problem and submit that for problem 0 on Gradescope.  (If you have not already shown proficiency three times with the Extended Euclidean Algorithm, this is a good assignment for demonstrating that skill again.
+
+\item You are setting up an RSA cipher with modulus $5021131$.  You may use the fact that $5021131 = 1907(2633)$.  You may want to use a computer to do most of the exponentiation computations on this problem. 
+\begin{enumerate}
+\item Is $5$ a valid encryption key?  If so, find the corresponding decryption key.  If not, explain why not.
+
+\item Is $7$ a valid encryption key?  If so, find the corresponding decryption key.  If not, explain why not.
+
+\item The encryption key $e = 3$ is valid for the modulus $5021131$ and corresponds to the decryption key $d = 3344395$.  If you are setting up a public key with this information, what is all of the information that you would post publicly so that a friend could send you an encrypted message?  What is all of the information relevant to this cipher that you would keep secret?
+\end{enumerate}
+
+
+
+\item For this problem, you are using an RSA cipher with modulus $1749551$.  Again, you may want to use a computer to do most of the computation for this problem. \\
+\begin{enumerate}
+\item If your plaintext is represented by $x = 884204$, use the encryption key $e = 7$ to encrypt $x$.
+\item You have received the ciphertext message $y = 384$.  Use the decryption key $d =952691$ to decrypt the message.  
+
+\end{enumerate}
+
+
+
+\item You know that an enemy has been encrypting messages using RSA and that the recipient's RSA modulus is $N = 580,799$.  (Because the RSA modulus is public information, this setup is plausible except for the very small size of $580,799$ as an RSA modulus.)  You would like to perform an attack on their RSA setup so that you can read their encrypted messages.  Magically, you have access to a square root oracle!  (This part of the setup is not plausible.  If square root oracles existed, RSA would not be secure.)  \\[1em]
+You compute $1234^2\equiv 361,158 \pmod{580,799}$ and ask your magical square root oracle for another square root of $361,158 $ modulo $580,799$. Your square root oracle tells you that $83,340^2\equiv 361,158 \pmod{580,799}$.  Can you use the information given to you by the square root oracle to factor $580,799$?  If so, do it.  If not, explain why not.  If you compute any GCDs when doing this problem, you must show your work using the Euclidean Algorithm. \\
+
+
+\item You are upset that your older sister is keeping secrets from you and you want to find out what she is saying. Luckily for you, her friends are not very knowledgeable about RSA and make poor exponent choices when picking their keys.  Your sister sends the same message, which is encoded as the integer $M$, to her three best friends.  Her friends all choose the encryption exponent $3$ and pick three different moduli: $N_1=17363$,$N_2=17473$, and $N_3=18419$.  You intercept the ciphertexts $C_1=2589$, $C_2=2388$, and $C_3=14968$, where the ciphertext $C_i$ corresponds to the modulus $N_i$.  Using H\r{a}stad's Broadcast Attack, figure out the value of $M$. \\
+ 
+ \item (Peer review problem) Let $p$ and $q$ be distinct primes.  Show that for all $x \in \mathbb{Z}$, we have the congruence $x^{(p-1)(q-1)+1} \equiv x \pmod{pq}$.  (Hint: Use the Chinese Remainder Theorem to reframe the desired congruence as a system of two congruences--one modulo $p$ and one modulo $q$.)
+\end{enumerate}
+
+
+\end{document}
