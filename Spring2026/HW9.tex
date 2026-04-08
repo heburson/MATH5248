@@ -1,0 +1,55 @@
+   \documentclass[12pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath,amsthm}
+\usepackage{fullpage}
+\usepackage{amsfonts}
+\usepackage{amssymb,multicol}
+\usepackage{hyperref, enumitem, systeme}
+\usepackage{xcolor,graphicx}
+
+\hypersetup{
+    colorlinks=true}
+
+\newcommand{\Z}{\mathbb{Z}}\newtheorem*{theorem}{Theorem}
+\newtheorem*{lemma}{Lemma}
+
+\newlist{checklist}{itemize}{2}
+\setlist[checklist]{label=$\square$}
+
+\begin{document}
+\begin{center}
+{\Large Homework 9}\\
+
+
+\end{center}
+{\bf Instructions:} Submit a pdf of your solutions to the HW 9 assignment on Gradescope by 11:59pm on Friday April 17. \\[3pt]
+
+\noindent Problem 2 is marked as a peer review problem. \href{https://docs.google.com/document/d/1jSw9pmMJJFUx_6dTkcUi4k4HJNIrrIIgs9zdWhAycx0/edit?usp=drive_link}{This document} gives directions and deadlines for the peer review process.
+\\[3pt]
+
+
+\begin{enumerate}
+\item[0.] If you would like any of these problems to be graded for proficiency with the key skills (listed in the syllabus), list the skill and the corresponding problem and submit that for problem 0 on Gradescope.  As an exception to the rule of only being allowed to demonstrate each skill once per assignment,  {\bf you can demonstrate two instances of proficiency with skill 10 on this assignment as long as you use two different theorems in the two problems where you earn credit.}
+
+ \item Bruce would like to send Ada a message using her ElGamal cipher.  The public information that Ada has posted is that her prime modulus is $p = 157$, her primitive root modulo $157$ is $g = 5$, and (in the notation from the PGP) she has computed $A = 91$.    Bruce's message for Ada is the plaintext $m = 121$, and his secret exponent is $k = 14$.  What information should Bruce send to Ana in order to communicate the message $m = 121$ through her ElGmal cipher?  
+ 
+ \item You are an enemy of Bruce and Ada and you want to be able to intercept their messages. As in the first problem,  the public information that Ada has posted is that her prime modulus is $p = 157$, her primitive root modulo $157$ is $g = 5$, and (in the notation from the PGP) she has computed $A = 91$.  You choose $15$ to be your exponent. 
+\begin{enumerate}
+\item You gain access to their network and replace Ada's value for A with your own. What number do you replace $A$ with?
+\item Bruce now receives your value for $A$ instead of Ada's. He chooses a secret exponent (that is different from the one in the previous problem) and encrypts his message as $(47,92)$. What was Bob's message?
+\end{enumerate}
+
+\item Use Euler's criterion to determine whether or not $19$ is a square modulo $107$. 
+
+\item(Peer review problem; each part is worth 4 points and graded as a separate problem.)  
+\begin{enumerate}
+\item Using the principal square root theorem, show that $5$ is a square modulo $19$ and find both square roots of $5$ modulo $19$. 
+\item Use Hensel's lemma to solve the congruence $$x^2
+\equiv 5\pmod{6859}$$. (Note $6859=19^3$. )
+\end{enumerate}
+
+
+\end{enumerate}
+
+
+\end{document}
